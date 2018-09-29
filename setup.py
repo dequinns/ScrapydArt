@@ -9,8 +9,7 @@ except ImportError:
 
 from os.path import join, dirname
 
-with open(join(dirname(__file__), 'scrapyd/VERSION')) as f:
-    version = f.read().strip()
+version = "1.2.0.2"
 
 setup_args = {
     'name': 'scrapydArt',
@@ -50,7 +49,7 @@ if using_setuptools:
         'enum-compat',
     ]
     setup_args['entry_points'] = {'console_scripts': [
-        'scrapyd = scrapyd.scripts.scrapyd_run:main'
+        'scrapydart = scrapyd.scripts.scrapyd_run:main'
     ]}
 else:
     setup_args['scripts'] = ['scrapyd/scripts/scrapyd_run.py']

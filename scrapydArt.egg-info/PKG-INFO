@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: scrapydArt
+Version: 1.2.0.2
+Summary: Scrapyd Plus, auth, order, filter……
+Home-page: https://github.com/dequinns/scrapydart
+Author: quinns
+Maintainer: quinns
+Maintainer-email: quinns@aliyun.com
+License: BSD
+Description: ==========
+        ScrapydArt
+        ==========
+        
+        .. image:: https://secure.travis-ci.org/scrapy/scrapyd.svg?branch=master
+            :target: http://travis-ci.org/scrapy/scrapyd
+        
+        .. image:: https://codecov.io/gh/scrapy/scrapyd/branch/master/graph/badge.svg
+            :target: https://codecov.io/gh/scrapy/scrapyd
+        
+        ScrapydArt base on Scrapyd, and added auth/filter/order…… and added new API
+        
+        ScrapydArt在Scrapyd新增了权限验证、筛选过滤、排序、数据统计以及排行榜等功能，并且有新的API
+        
+        ScrapydArt is a service for running `Scrapy`_ spiders.
+        
+        It allows you to deploy your Scrapy projects and control their spiders using an
+        HTTP JSON API.
+        
+        The documentation (including installation and usage) can be found at:
+        http://scrapydart.readthedocs.org/
+        
+        .. _Scrapy: https://github.com/dequinns/scrapydart
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Topic :: Internet :: WWW/HTTP
