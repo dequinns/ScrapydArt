@@ -17,7 +17,7 @@ setup_args = {
     'version': version,
     'url': 'https://github.com/scrapy/scrapyd',
     'description': 'A service for running Scrapy spiders, with an HTTP API',
-    'long_description': open('README.rst').read(),
+    'long_description': open('README.rst', encoding="utf-8").read(),
     'author': 'Scrapy developers',
     'maintainer': 'Scrapy developers',
     'maintainer_email': 'info@scrapy.org',

@@ -10,7 +10,7 @@ ScrapydArt
 
 ScrapydArt base on Scrapyd, and added auth/filter/order…… and added new API
 
-ScrapydArt在Scrapyd新增了权限验证、筛选过滤、排序、数据统计以及排行榜等功能，并且有新的API
+ScrapydArt在Scrapyd基础上新增了权限验证、筛选过滤、排序、数据统计以及排行榜等功能，并且有了更强大的API。
 
 ScrapydArt is a service for running `Scrapy`_ spiders.
 

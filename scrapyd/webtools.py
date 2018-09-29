@@ -11,20 +11,20 @@ from .utils import native_stringify_dict
 
 
 def file_read(filename):
-    with open(filename, 'r') as h:
-        text_bytes = h.read().encode("utf8")
-        text_str = str(text_bytes, encoding="utf8")
+    with open(filename, 'r', encoding="utf-8") as h:
+        text_bytes = h.read().encode("utf-8")
+        text_str = str(text_bytes, encoding="utf-8")
         return text_str
 
 
 def str_to_bytes(values):
     if isinstance(values, str):
-        return bytes(values, encoding="utf8")
+        return bytes(values, encoding="utf-8")
 
 
 def bytes_to_str(values):
     if isinstance(values, bytes):
-        return str(values, encoding="utf8")
+        return str(values, encoding="utf-8")
 
 
 def format_dict(values):
@@ -166,9 +166,9 @@ def features(self):
 
 def host_information(request):
     host, port, un, pwd = request.host.host, str(request.host.port), "un", "pwd"
-    if request.args.get(bytes(un, encoding="utf8")) and request.args.get(bytes(pwd, encoding="utf8")):
-        username = str(request.args.get(bytes(un, encoding="utf8"))[0], encoding="utf8")
-        password = str(request.args.get(bytes(pwd, encoding="utf8"))[0], encoding="utf8")
+    if request.args.get(bytes(un, encoding="utf-8")) and request.args.get(bytes(pwd, encoding="utf-8")):
+        username = str(request.args.get(bytes(un, encoding="utf-8"))[0], encoding="utf-8")
+        password = str(request.args.get(bytes(pwd, encoding="utf-8"))[0], encoding="utf-8")
         return {"host": host, "port": port, "un": username, "pwd": password}
     return {"host": host, "port": port, "username": "", "pwd": ""}
 
