@@ -1,0 +1,361 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API &#8212; ScrapydArt 1.2.0.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.2.0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration file" href="config.html" />
+    <link rel="prev" title="Deploying your project" href="deploy.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api">
+<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<p>The following section describes the available resources in Scrapyd JSON API.</p>
+<div class="section" id="daemonstatus-json">
+<h2>daemonstatus.json<a class="headerlink" href="#daemonstatus-json" title="Permalink to this headline">¶</a></h2>
+<p>To check the load status of a service.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;running&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;pending&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="addversion-json">
+<h2>addversion.json<a class="headerlink" href="#addversion-json" title="Permalink to this headline">¶</a></h2>
+<p>Add a version to a project, creating the project if it doesn’t exist.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+<li><code class="docutils literal"><span class="pre">version</span></code> (string, required) - the project version</li>
+<li><code class="docutils literal"><span class="pre">egg</span></code> (file, required) - a Python egg containing the project’s code</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/addversion.json -F project=myproject -F version=r23 -F egg=@myproject.egg
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;spiders&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Scrapyd uses the <a class="reference external" href="http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html">distutils LooseVersion</a> to interpret the version numbers you provide.</p>
+</div>
+<p>The latest version for a project will be used by default whenever necessary.</p>
+<p><a class="reference internal" href="#schedule-json">schedule.json</a> and <a class="reference internal" href="#listspiders-json">listspiders.json</a> allow you to explicitly set the desired project version.</p>
+</div>
+<div class="section" id="schedule-json">
+<span id="scrapyd-schedule"></span><h2>schedule.json<a class="headerlink" href="#schedule-json" title="Permalink to this headline">¶</a></h2>
+<p>Schedule a spider run (also known as a job), returning the job id.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+<li><code class="docutils literal"><span class="pre">spider</span></code> (string, required) - the spider name</li>
+<li><code class="docutils literal"><span class="pre">setting</span></code> (string, optional) - a Scrapy setting to use when running the spider</li>
+<li><code class="docutils literal"><span class="pre">jobid</span></code> (string, optional) - a job id used to identify the job, overrides the default generated UUID</li>
+<li><code class="docutils literal"><span class="pre">_version</span></code> (string, optional) - the version of the project to use</li>
+<li>any other parameter is passed as spider argument</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=somespider
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;jobid&quot;</span><span class="p">:</span> <span class="s2">&quot;6487ec79947edab326d6db28a2d86511e8247444&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Example request passing a spider argument (<code class="docutils literal"><span class="pre">arg1</span></code>) and a setting
+(<a class="reference external" href="http://doc.scrapy.org/en/latest/topics/settings.html#download-delay">DOWNLOAD_DELAY</a>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=somespider -d setting=DOWNLOAD_DELAY=2 -d arg1=val1
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Spiders scheduled with scrapyd should allow for an arbitrary number of keyword arguments
+as scrapyd sends internally generated spider arguments to the spider being scheduled</p>
+</div>
+</div>
+<div class="section" id="cancel-json">
+<span id="id2"></span><h2>cancel.json<a class="headerlink" href="#cancel-json" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.15.</span></p>
+</div>
+<p>Cancel a spider run (aka. job). If the job is pending, it will be removed. If
+the job is running, it will be terminated.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+<li><code class="docutils literal"><span class="pre">job</span></code> (string, required) - the job id</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/cancel.json -d project=myproject -d job=6487ec79947edab326d6db28a2d86511e8247444
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;prevstate&quot;</span><span class="p">:</span> <span class="s2">&quot;running&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listprojects-json">
+<h2>listprojects.json<a class="headerlink" href="#listprojects-json" title="Permalink to this headline">¶</a></h2>
+<p>Get the list of projects uploaded to this Scrapy server.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>Parameters: none</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listprojects.json
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;otherproject&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listversions-json">
+<h2>listversions.json<a class="headerlink" href="#listversions-json" title="Permalink to this headline">¶</a></h2>
+<p>Get the list of versions available for some project. The versions are returned
+in order, the last one is the currently used version.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listversions.json?project=myproject
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;versions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;r99&quot;</span><span class="p">,</span> <span class="s2">&quot;r156&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listspiders-json">
+<h2>listspiders.json<a class="headerlink" href="#listspiders-json" title="Permalink to this headline">¶</a></h2>
+<p>Get the list of spiders available in the last (unless overridden) version of some project.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+<li><code class="docutils literal"><span class="pre">_version</span></code> (string, optional) - the version of the project to examine</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listspiders.json?project=myproject
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;spiders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;spider1&quot;</span><span class="p">,</span> <span class="s2">&quot;spider2&quot;</span><span class="p">,</span> <span class="s2">&quot;spider3&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listjobs-json">
+<span id="id3"></span><h2>listjobs.json<a class="headerlink" href="#listjobs-json" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.15.</span></p>
+</div>
+<p>Get the list of pending, running and finished jobs of some project.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, option) - restrict results to project name</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/listjobs.json?project=myproject | python -m json.tool
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pending&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;spider1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;78391cc0fcaf11e1b0090800272a6d06&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;running&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;422e608f9f28cef127b3d5ef93fe9399&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;spider2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-12 10:14:03.594664&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2f16646cfcaf11e1b0090800272a6d06&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;myproject&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;spider3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-12 10:14:03.594664&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-12 10:24:03.594664&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All job data is kept in memory and will be reset when the Scrapyd service is restarted. See <a class="reference external" href="https://github.com/scrapy/scrapyd/issues/12">issue 12</a>.</p>
+</div>
+</div>
+<div class="section" id="delversion-json">
+<h2>delversion.json<a class="headerlink" href="#delversion-json" title="Permalink to this headline">¶</a></h2>
+<p>Delete a project version. If there are no more versions available for a given
+project, that project will be deleted too.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+<li><code class="docutils literal"><span class="pre">version</span></code> (string, required) - the project version</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/delversion.json -d project=myproject -d version=r99
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delproject-json">
+<h2>delproject.json<a class="headerlink" href="#delproject-json" title="Permalink to this headline">¶</a></h2>
+<p>Delete a project and all its uploaded versions.</p>
+<ul class="simple">
+<li>Supported Request Methods: <code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>Parameters:<ul>
+<li><code class="docutils literal"><span class="pre">project</span></code> (string, required) - the project name</li>
+</ul>
+</li>
+</ul>
+<p>Example request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/delproject.json -d project=myproject
+</pre></div>
+</div>
+<p>Example response:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API</a><ul>
+<li><a class="reference internal" href="#daemonstatus-json">daemonstatus.json</a></li>
+<li><a class="reference internal" href="#addversion-json">addversion.json</a></li>
+<li><a class="reference internal" href="#schedule-json">schedule.json</a></li>
+<li><a class="reference internal" href="#cancel-json">cancel.json</a></li>
+<li><a class="reference internal" href="#listprojects-json">listprojects.json</a></li>
+<li><a class="reference internal" href="#listversions-json">listversions.json</a></li>
+<li><a class="reference internal" href="#listspiders-json">listspiders.json</a></li>
+<li><a class="reference internal" href="#listjobs-json">listjobs.json</a></li>
+<li><a class="reference internal" href="#delversion-json">delversion.json</a></li>
+<li><a class="reference internal" href="#delproject-json">delproject.json</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="deploy.html" title="previous chapter">Deploying your project</a></li>
+      <li>Next: <a href="config.html" title="next chapter">Configuration file</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Scrapy group and quinns.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

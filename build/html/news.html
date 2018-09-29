@@ -1,0 +1,314 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Release notes &#8212; ScrapydArt 1.2.0.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.2.0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Contributing" href="contributing.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="release-notes">
+<span id="news"></span><h1>Release notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1.3.0<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><em>Unreleased</em></p>
+<div class="section" id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Jobs website shortcut to cancel a job using the cancel.json webservice.</li>
+<li>Make project argument to listjobs.json optional,
+so that we can easily query for all jobs.</li>
+</ul>
+</div>
+<div class="section" id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Doc for ubunut installs removed. Scrapinghub no longer maintains ubuntu repo.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>1.2.0<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><em>Release date: 2017-04-12</em></p>
+<p>The highlight of this release is the long-awaited Python 3 support.</p>
+<p>The new scrapy requirement is version 1.0 or higher.
+Python 2.6 is no longer supported by scrapyd.</p>
+<p>Some unused sqlite utilities are now deprecated
+and will be removed from a later scrapyd release.
+Instantiating them or subclassing from them
+will trigger a deprecation warning.
+These are located under <code class="docutils literal"><span class="pre">scrapyd.sqlite</span></code>:</p>
+<ul class="simple">
+<li>SqliteDict</li>
+<li>SqlitePickleDict</li>
+<li>SqlitePriorityQueue</li>
+<li>PickleSqlitePriorityQueue</li>
+</ul>
+<div class="section" id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Include run’s PID in listjobs webservice.</li>
+<li>Include full tracebacks from scrapy when failing to get spider list.
+This will lead to more noisy webservice output
+but will make debugging deployment problems much easier.</li>
+<li>Include start/finish time in daemon’s joblist page</li>
+<li>Twisted 16 compatibility</li>
+<li>Python 3 compatibility</li>
+<li>Make console script executable</li>
+<li>Project version argument in the schedule webservice</li>
+<li>Configuration option for website root class</li>
+<li>Optional jobid argument to schedule webservice</li>
+<li>Contribution documentation</li>
+<li>Daemon status webservice</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Removed<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>scrapyd’s bind_address now defaults to 127.0.0.1 instead of 0.0.0.0
+to listen only for connection from the local host</li>
+<li>scrapy &lt; 1.0 compatibility</li>
+<li>python &lt; 2.7 compatibility</li>
+</ul>
+</div>
+<div class="section" id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Poller race condition for concurrently accessed queues</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>1.1.1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p><em>Release date: 2016-11-03</em></p>
+<div class="section" id="id6">
+<h3>Removed<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Disabled bdist_wheel command in setup to define dynamic requirements
+despite of pip-7 wheel caching bug.</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Fixed<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Use correct type adapter for sqlite3 blobs.
+In some systems, a wrong type adapter leads to incorrect buffer reads/writes.</li>
+<li>FEED_URI was always overridden by scrapyd</li>
+<li>Specified maximum versions for requirements that became incompatible.</li>
+<li>Marked package as zip-unsafe because twistd requires a plain <code class="docutils literal"><span class="pre">txapp.py</span></code></li>
+<li>Don’t install zipped scrapy in py26 CI env
+because its setup doesn’t include the <code class="docutils literal"><span class="pre">scrapy/VERSION</span></code> file.</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>Added<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Enabled some missing tests for the sqlite queues.</li>
+<li>Enabled CI tests for python2.6 because it was supported by the 1.1 release.</li>
+<li>Document missing config options and include in default_scrapyd.conf</li>
+<li>Note the spider queue’s <code class="docutils literal"><span class="pre">priority</span></code> argument in the scheduler’s doc.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>1.1.0<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p><em>Release date: 2015-06-29</em></p>
+<div class="section" id="features-enhancements">
+<h3>Features &amp; Enhancements<a class="headerlink" href="#features-enhancements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Outsource scrapyd-deploy command to scrapyd-client (c1358dc, c9d66ca..191353e)
+<strong>If you rely on this command, install the scrapyd-client package from pypi.</strong></li>
+<li>Look for a <code class="docutils literal"><span class="pre">~/.scrapyd.conf</span></code> file in the users home (1fce99b)</li>
+<li>Adding the nodename to identify the process that is working on the job (fac3a5c..4aebe1c)</li>
+<li>Allow remote items store (e261591..35a21db)</li>
+<li>Debian sysvinit script (a54193a, ff457a9)</li>
+<li>Add ‘start_time’ field in webservice for running jobs (6712af9, acd460b)</li>
+<li>Check if a spider exists before schedule it (with sqlite cache) (#8, 288afef..a185ff2)</li>
+</ul>
+</div>
+<div class="section" id="bugfixes">
+<h3>Bugfixes<a class="headerlink" href="#bugfixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>F̶i̶x̶ ̶s̶c̶r̶a̶p̶y̶d̶-̶d̶e̶p̶l̶o̶y̶ ̶-̶-̶l̶i̶s̶t̶-̶p̶r̶o̶j̶e̶c̶t̶s̶ ̶(̶9̶4̶2̶a̶1̶b̶2̶)̶ → moved to scrapyd-client</li>
+<li>Sanitize version names when creating egg paths (8023720)</li>
+<li>Copy txweb/JsonResource from scrapy which no longer provides it (99ea920)</li>
+<li>Use w3lib to generate correct feed uris (9a88ea5)</li>
+<li>Fix GIT versioning for projects without annotated tags (e91dcf4 #34)</li>
+<li>Correcting HTML tags in scrapyd website monitor (da5664f, 26089cd)</li>
+<li>Fix FEED_URI path on windows (4f0060a)</li>
+</ul>
+</div>
+<div class="section" id="setup-script-and-tests-ci">
+<h3>Setup script and Tests/CI<a class="headerlink" href="#setup-script-and-tests-ci" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Restore integration test script (66de25d)</li>
+<li>Changed scripts to be installed using entry_points (b670f5e)</li>
+<li>Renovate scrapy upstart job (d130770)</li>
+<li>Travis.yml: remove deprecated <code class="docutils literal"><span class="pre">--use-mirros</span></code> pip option (b3cdc61)</li>
+<li>Mark package as zip unsafe because twistd requires a plain <code class="docutils literal"><span class="pre">txapp.py</span></code> (f27c054)</li>
+<li>Removed python 2.6/lucid env from travis (5277755)</li>
+<li>Made Scrapyd package name lowercase (1adfc31)</li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Spiders should allow for arbitrary keyword arguments (696154)</li>
+<li>Various typos (51f1d69, 0a4a77a)</li>
+<li>Fix release notes: 1.0 is already released (6c8dcfb)</li>
+<li>Point website module’s links to readthedocs (215c700)</li>
+<li>Remove reference to ‘scrapy server’ command (f599b60)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>1.0.2<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p><em>Release date: 2016-03-28</em></p>
+<div class="section" id="setup-script">
+<h3>setup script<a class="headerlink" href="#setup-script" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Specified maximum versions for requirements that became incompatible.</li>
+<li>Marked package as zip-unsafe because twistd requires a plain <code class="docutils literal"><span class="pre">txapp.py</span></code></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>documentation<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Updated broken links, references to wrong versions and scrapy</li>
+<li>Warn that scrapyd 1.0 felling out of support</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>1.0.1<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p><em>Release date: 2013-09-02</em>
+<em>Trivial update</em></p>
+</div>
+<div class="section" id="id13">
+<h2>1.0.0<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p><em>Release date: 2013-09-02</em></p>
+<p>First standalone release (it was previously shipped with Scrapy until Scrapy 0.16).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Release notes</a><ul>
+<li><a class="reference internal" href="#id1">1.3.0</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#removed">Removed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">1.2.0</a><ul>
+<li><a class="reference internal" href="#id3">Added</a></li>
+<li><a class="reference internal" href="#id4">Removed</a></li>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">1.1.1</a><ul>
+<li><a class="reference internal" href="#id6">Removed</a></li>
+<li><a class="reference internal" href="#id7">Fixed</a></li>
+<li><a class="reference internal" href="#id8">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">1.1.0</a><ul>
+<li><a class="reference internal" href="#features-enhancements">Features &amp; Enhancements</a></li>
+<li><a class="reference internal" href="#bugfixes">Bugfixes</a></li>
+<li><a class="reference internal" href="#setup-script-and-tests-ci">Setup script and Tests/CI</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">1.0.2</a><ul>
+<li><a class="reference internal" href="#setup-script">setup script</a></li>
+<li><a class="reference internal" href="#id11">documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">1.0.1</a></li>
+<li><a class="reference internal" href="#id13">1.0.0</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="contributing.html" title="previous chapter">Contributing</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/news.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Scrapy group and quinns.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/news.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,283 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuration file &#8212; ScrapydArt 1.2.0.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.2.0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="API" href="api.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration-file">
+<span id="config"></span><h1>Configuration file<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h1>
+<p>Scrapyd searches for configuration files in the following locations, and parses
+them in order with the latest one taking more priority:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">/etc/scrapyd/scrapyd.conf</span></code> (Unix)</li>
+<li><code class="docutils literal"><span class="pre">c:\scrapyd\scrapyd.conf</span></code> (Windows)</li>
+<li><code class="docutils literal"><span class="pre">/etc/scrapyd/conf.d/*</span></code> (in alphabetical order, Unix)</li>
+<li><code class="docutils literal"><span class="pre">scrapyd.conf</span></code></li>
+<li><code class="docutils literal"><span class="pre">~/.scrapyd.conf</span></code> (users home directory)</li>
+</ul>
+<p>The configuration file supports the following options (see default values in
+the <a class="reference internal" href="#config-example"><span class="std std-ref">example</span></a>).</p>
+<div class="section" id="http-port">
+<h2>http_port<a class="headerlink" href="#http-port" title="Permalink to this headline">¶</a></h2>
+<p>The TCP port where the HTTP JSON API will listen. Defaults to <code class="docutils literal"><span class="pre">6800</span></code>.</p>
+</div>
+<div class="section" id="bind-address">
+<h2>bind_address<a class="headerlink" href="#bind-address" title="Permalink to this headline">¶</a></h2>
+<p>The IP address where the website and json webservices will listen.
+Defaults to <code class="docutils literal"><span class="pre">127.0.0.1</span></code> (localhost)</p>
+</div>
+<div class="section" id="max-proc">
+<span id="id1"></span><h2>max_proc<a class="headerlink" href="#max-proc" title="Permalink to this headline">¶</a></h2>
+<p>The maximum number of concurrent Scrapy process that will be started. If unset
+or <code class="docutils literal"><span class="pre">0</span></code> it will use the number of cpus available in the system multiplied by
+the value in <code class="docutils literal"><span class="pre">max_proc_per_cpu</span></code> option. Defaults to <code class="docutils literal"><span class="pre">0</span></code>.</p>
+</div>
+<div class="section" id="max-proc-per-cpu">
+<span id="id2"></span><h2>max_proc_per_cpu<a class="headerlink" href="#max-proc-per-cpu" title="Permalink to this headline">¶</a></h2>
+<p>The maximum number of concurrent Scrapy process that will be started per cpu.
+Defaults to <code class="docutils literal"><span class="pre">4</span></code>.</p>
+</div>
+<div class="section" id="debug">
+<h2>debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
+<p>Whether debug mode is enabled. Defaults to <code class="docutils literal"><span class="pre">off</span></code>. When debug mode is enabled
+the full Python traceback will be returned (as plain text responses) when there
+is an error processing a JSON API call.</p>
+</div>
+<div class="section" id="eggs-dir">
+<h2>eggs_dir<a class="headerlink" href="#eggs-dir" title="Permalink to this headline">¶</a></h2>
+<p>The directory where the project eggs will be stored.</p>
+</div>
+<div class="section" id="dbs-dir">
+<h2>dbs_dir<a class="headerlink" href="#dbs-dir" title="Permalink to this headline">¶</a></h2>
+<p>The directory where the project databases will be stored (this includes the
+spider queues).</p>
+</div>
+<div class="section" id="logs-dir">
+<h2>logs_dir<a class="headerlink" href="#logs-dir" title="Permalink to this headline">¶</a></h2>
+<p>The directory where the Scrapy logs will be stored. If you want to disable
+storing logs set this option empty, like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">logs_dir</span> <span class="o">=</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="items-dir">
+<span id="id3"></span><h2>items_dir<a class="headerlink" href="#items-dir" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.15.</span></p>
+</div>
+<p>The directory where the Scrapy items will be stored.
+This option is disabled by default
+because you are expected to use a database or a feed exporter.
+Setting it to non-empty results in storing scraped item feeds
+to the specified directory by overriding the scrapy setting <code class="docutils literal"><span class="pre">FEED_URI</span></code>.</p>
+</div>
+<div class="section" id="jobs-to-keep">
+<span id="id4"></span><h2>jobs_to_keep<a class="headerlink" href="#jobs-to-keep" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.15.</span></p>
+</div>
+<p>The number of finished jobs to keep per spider.
+Defaults to <code class="docutils literal"><span class="pre">5</span></code>.
+This refers to logs and items.</p>
+<p>This setting was named <code class="docutils literal"><span class="pre">logs_to_keep</span></code> in previous versions.</p>
+</div>
+<div class="section" id="finished-to-keep">
+<span id="id5"></span><h2>finished_to_keep<a class="headerlink" href="#finished-to-keep" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.14.</span></p>
+</div>
+<p>The number of finished processes to keep in the launcher.
+Defaults to <code class="docutils literal"><span class="pre">100</span></code>.
+This only reflects on the website /jobs endpoint and relevant json webservices.</p>
+</div>
+<div class="section" id="poll-interval">
+<h2>poll_interval<a class="headerlink" href="#poll-interval" title="Permalink to this headline">¶</a></h2>
+<p>The interval used to poll queues, in seconds.
+Defaults to <code class="docutils literal"><span class="pre">5.0</span></code>.
+Can be a float, such as <code class="docutils literal"><span class="pre">0.2</span></code></p>
+</div>
+<div class="section" id="runner">
+<h2>runner<a class="headerlink" href="#runner" title="Permalink to this headline">¶</a></h2>
+<p>The module that will be used for launching sub-processes. You can customize the
+Scrapy processes launched from Scrapyd by using your own module.</p>
+</div>
+<div class="section" id="application">
+<h2>application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h2>
+<p>A function that returns the (Twisted) Application object to use. This can be
+used if you want to extend Scrapyd by adding and removing your own components
+and services.</p>
+<p>For more info see <a class="reference external" href="http://twistedmatrix.com/documents/current/core/howto/application.html">Twisted Application Framework</a></p>
+</div>
+<div class="section" id="webroot">
+<span id="id6"></span><h2>webroot<a class="headerlink" href="#webroot" title="Permalink to this headline">¶</a></h2>
+<p>A twisted web resource that represents the interface to scrapyd.
+Scrapyd includes an interface with a website to provide simple monitoring
+and access to the application’s webresources.
+This setting must provide the root class of the twisted web resource.</p>
+</div>
+<div class="section" id="node-name">
+<h2>node_name<a class="headerlink" href="#node-name" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
+</div>
+<p>The node name for each node to something like the display hostname. Defaults to <code class="docutils literal"><span class="pre">${socket.gethostname()}</span></code>.</p>
+</div>
+<div class="section" id="example-configuration-file">
+<span id="config-example"></span><h2>Example configuration file<a class="headerlink" href="#example-configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>Here is an example configuration file with all the defaults:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">scrapyd</span><span class="p">]</span>
+<span class="n">eggs_dir</span>    <span class="o">=</span> <span class="n">eggs</span>
+<span class="n">logs_dir</span>    <span class="o">=</span> <span class="n">logs</span>
+<span class="n">items_dir</span>   <span class="o">=</span>
+<span class="n">jobs_to_keep</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">dbs_dir</span>     <span class="o">=</span> <span class="n">dbs</span>
+<span class="n">max_proc</span>    <span class="o">=</span> <span class="mi">0</span>
+<span class="n">max_proc_per_cpu</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">finished_to_keep</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">poll_interval</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">bind_address</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="n">http_port</span>   <span class="o">=</span> <span class="mi">6800</span>
+<span class="n">debug</span>       <span class="o">=</span> <span class="n">off</span>
+<span class="n">runner</span>      <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">runner</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">application</span>
+<span class="n">launcher</span>    <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">Launcher</span>
+<span class="n">webroot</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">website</span><span class="o">.</span><span class="n">Root</span>
+
+
+
+<span class="p">[</span><span class="n">services</span><span class="p">]</span>
+<span class="n">schedule</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Schedule</span>
+<span class="n">cancel</span><span class="o">.</span><span class="n">json</span>       <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Cancel</span>
+<span class="n">addversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">AddVersion</span>
+<span class="n">listprojects</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListProjects</span>
+<span class="n">listversions</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListVersions</span>
+<span class="n">listspiders</span><span class="o">.</span><span class="n">json</span>  <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListSpiders</span>
+<span class="n">delproject</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteProject</span>
+<span class="n">delversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteVersion</span>
+<span class="n">listjobs</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListJobs</span>
+<span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DaemonStatus</span>
+<span class="n">schedulelist</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ScheduleList</span>
+<span class="n">runtimestats</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">RunTimeStats</span>
+<span class="n">psnstats</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">PsnStats</span>
+<span class="n">prospider</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ProSpider</span>
+<span class="n">timerank</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">TimeRank</span>
+<span class="n">invokerank</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">InvokeRank</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Filter</span>
+<span class="n">order</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Order</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration file</a><ul>
+<li><a class="reference internal" href="#http-port">http_port</a></li>
+<li><a class="reference internal" href="#bind-address">bind_address</a></li>
+<li><a class="reference internal" href="#max-proc">max_proc</a></li>
+<li><a class="reference internal" href="#max-proc-per-cpu">max_proc_per_cpu</a></li>
+<li><a class="reference internal" href="#debug">debug</a></li>
+<li><a class="reference internal" href="#eggs-dir">eggs_dir</a></li>
+<li><a class="reference internal" href="#dbs-dir">dbs_dir</a></li>
+<li><a class="reference internal" href="#logs-dir">logs_dir</a></li>
+<li><a class="reference internal" href="#items-dir">items_dir</a></li>
+<li><a class="reference internal" href="#jobs-to-keep">jobs_to_keep</a></li>
+<li><a class="reference internal" href="#finished-to-keep">finished_to_keep</a></li>
+<li><a class="reference internal" href="#poll-interval">poll_interval</a></li>
+<li><a class="reference internal" href="#runner">runner</a></li>
+<li><a class="reference internal" href="#application">application</a></li>
+<li><a class="reference internal" href="#webroot">webroot</a></li>
+<li><a class="reference internal" href="#node-name">node_name</a></li>
+<li><a class="reference internal" href="#example-configuration-file">Example configuration file</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="api.html" title="previous chapter">API</a></li>
+      <li>Next: <a href="contributing.html" title="next chapter">Contributing</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/config.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Scrapy group and quinns.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/config.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
