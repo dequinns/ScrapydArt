@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: scrapydart
-Version: 1.2.0.8
+Version: 1.2.0.9
 Summary: A service for running Scrapy spiders, with an HTTP API
 Home-page: https://github.com/scrapy/scrapyd
 Author: Scrapy developers
