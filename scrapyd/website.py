@@ -169,7 +169,7 @@ class Jobs(CustomResource):
             for m in queue.list()
         )
         quinn = [queue.list() for project, queue in self.root.poller.queues.items()]
-        dps = len(quinn[0])  # quinn格式为[[{}, {}, {}]]
+        dps = len(quinn[0]) if quinn else 0  # quinn格式为[[{}, {}, {}]]
         return {"pending": pending, "number": str(dps)}
 
     def prep_tab_running(self):
@@ -252,8 +252,15 @@ class Jobs(CustomResource):
         </ul>
             """.format(home_uri=home_uri, jobs_uri=jobs_uri, feature_uri=feature_uri, documents_uri=documents_uri)
         header = HEADER_HTML.format(style_css=STYLE_CSS, reset_css=RESET_CSS, nav=nav)
-        jobs = JOBS_HTML.format(table_header=table_header, tables=self.prep_table(), most_spider=most_record[0],
-                                most_num=most_record[1], invoked_spider=",".join(invoked_spider),
+        most_spider, most_num = most_record
+        tps = table_header
+        aps = self.prep_table()
+        invoked_spider = ",".join(invoked_spider)
+        un_invoked_spider = ",".join(un_invoked_spider)
+        feature_uri = feature_uri
+
+        jobs = JOBS_HTML.format(table_header=table_header, tables=self.prep_table(), most_spider=most_spider,
+                                most_num=most_num, invoked_spider=",".join(invoked_spider),
                                 un_invoked_spider=",".join(un_invoked_spider), feature_uri=feature_uri)
         footers = FOOTERS_HTML
         self.content = str_to_bytes(header + jobs + footers)  # return value need bytes

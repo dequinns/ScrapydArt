@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/lib/scrapyd/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/scrapyd/website.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/scrapyd/websource.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/scrapyd/websource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/scrapyd/webtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/scrapyd/webtools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/scrapydArt-1.2.0.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/website.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/websource.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/websource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/webtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/webtools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/not-zip-safe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/requires.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydArt.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/documents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/footers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/img/._cd-icon-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/img/cd-icon-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/jobs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/jquery-2.1.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/modern.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/velocity.min.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ScrapdArt$scrapyd_run.coverage" NAME="scrapyd_run Coverage Results" MODIFIED="1538211221518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapyd/scripts" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1669486045">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="45" />
+    <option name="width" value="1717" />
+    <option name="height" value="922" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="scrapyd_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ScrapdArt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapyd/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapyd/scripts/scrapyd_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.scrapyd_run" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="" />
+      <created>1538211124405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538211124405</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="45" width="1717" height="922" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24955116" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

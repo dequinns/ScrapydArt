@@ -1,11 +1,11 @@
 Metadata-Version: 1.2
-Name: scrapydArt
-Version: 1.2.0.2
-Summary: Scrapyd Plus, auth, order, filter……
-Home-page: https://github.com/dequinns/scrapydart
-Author: quinns
-Maintainer: quinns
-Maintainer-email: quinns@aliyun.com
+Name: scrapydart
+Version: 1.2.0.8
+Summary: A service for running Scrapy spiders, with an HTTP API
+Home-page: https://github.com/scrapy/scrapyd
+Author: Scrapy developers
+Maintainer: Scrapy developers
+Maintainer-email: info@scrapy.org
 License: BSD
 Description: ==========
         ScrapydArt

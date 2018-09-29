@@ -37,6 +37,8 @@ def get_spiders(values):
     """ 第一次get_spider_list时很费时，大约2s多。但是会放在缓存，后面访问直接从缓存拿，则很快
     [['tips', 'nof'], ['nop']] -> ['tips', 'nof', 'nop']
     """
+    if not values:
+        return []
     value = list(reduce(lambda x, y: x+y,  map(get_spider_list, values)))  # first 2.8s
     return value
 
@@ -135,7 +137,8 @@ def status_nums(self, finishes):
     """
     pends = [queue.list() for project, queue in self.root.poller.queues.items()]
     run_value = self.root.launcher.processes.values()  # 正在运行的爬虫列表
-    return list(map(len, [pends[0], run_value, finishes]))
+    pend = pends[0] if pends else []
+    return list(map(len, [pend, run_value, finishes]))
 
 
 def get_psn(projects):

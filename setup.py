@@ -9,17 +9,18 @@ except ImportError:
 
 from os.path import join, dirname
 
-version = "1.2.0.2"
+with open(join(dirname(__file__), 'scrapyd/VERSION')) as f:
+    version = f.read().strip()
 
 setup_args = {
-    'name': 'scrapydArt',
+    'name': 'scrapydart',
     'version': version,
-    'url': 'https://github.com/dequinns/scrapydart',
-    'description': 'Scrapyd Plus, auth, order, filter……',
+    'url': 'https://github.com/scrapy/scrapyd',
+    'description': 'A service for running Scrapy spiders, with an HTTP API',
     'long_description': open('README.rst').read(),
-    'author': 'quinns',
-    'maintainer': 'quinns',
-    'maintainer_email': 'quinns@aliyun.com',
+    'author': 'Scrapy developers',
+    'maintainer': 'Scrapy developers',
+    'maintainer_email': 'info@scrapy.org',
     'license': 'BSD',
     'packages': ['scrapyd'],
     'include_package_data': True,
