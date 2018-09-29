@@ -1,0 +1,23 @@
+	<main class="cd-main">
+		<section class="cd-section index visible">
+			<div class="top-hello">
+				<div class="top-hello-text">
+					<h1>What is ScrapydArt? <a href={feature_uri}>click here.</a></h1>
+					<p><span>How to schedule a spider?</span> Example using curl:http://localhost:6800/schedule.json -d project=default -d spider=some spider</p>
+				</div>
+			</div>
+			<div class="show-data-small">
+				<div class="show-data-middle">
+					<div class="sdm-top">
+						<p><span>被调用过的爬虫 : </span><span>{invoked_spider}</span></p>
+						<p><span>被调用次数最多 : </span><span>{most_spider},{most_num}次</span></p>
+						<p><span>未被调用的爬虫 : </span><span>{un_invoked_spider}</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="show-data-dataintable">
+				<table class="dataintable">
+					<tr>{table_header}</tr>
+					{tables}
+				</table>
+			</div>
