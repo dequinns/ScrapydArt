@@ -17,7 +17,7 @@ ScrapydArt is a service for running `Scrapy`_ spiders.
 It allows you to deploy your Scrapy projects and control their spiders using an
 HTTP JSON API.
 
-The documentation (including installation and usage) can be found at:
-http://scrapydart.readthedocs.org/
+The documentation (including installation and usage) can be found at(官方文档在此):
+https://scrapdart.readthedocs.io/zh/latest/
 
 .. _Scrapy: https://github.com/dequinns/scrapydart
