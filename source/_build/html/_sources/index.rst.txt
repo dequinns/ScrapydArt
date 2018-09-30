@@ -14,11 +14,11 @@ Contents
    :maxdepth: 2
 
    overview
-   contact
-   auth
    install
-   deploy
+   auth
    api
    config
+   contact
    contributing
    news
+   deploy
