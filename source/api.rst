@@ -13,7 +13,7 @@ schedulelist.json
 
     invoked_spider - 被调用过的爬虫
 
-    invoked_spider - 未被调用过的爬虫
+    un_invoked_spider - 未被调用过的爬虫
 
     most_record - 被调用次数最多的爬虫名称及次数
 
