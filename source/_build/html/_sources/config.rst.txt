@@ -1,7 +1,11 @@
 .. _config:
 
-Configuration file
+配置文件
 ==================
+
+配置文件的路径以及名称与Scrapyd保持一致
+
+新增的API配置已然加入其中
 
 Scrapyd searches for configuration files in the following locations, and parses
 them in order with the latest one taking more priority:

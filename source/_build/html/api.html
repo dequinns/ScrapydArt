@@ -4,26 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>API &#8212; ScrapydArt 1.2.0.5 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.2.0.5',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Configuration file" href="config.html" />
+    <link rel="next" title="配置文件" href="config.html" />
     <link rel="prev" title="Deploying your project" href="deploy.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -46,7 +37,7 @@
 <div class="section" id="schedulelist-json">
 <h2>schedulelist.json<a class="headerlink" href="#schedulelist-json" title="Permalink to this headline">¶</a></h2>
 <p>用于获取爬虫调用情况,如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">invoked_spider</span> <span class="o">-</span> <span class="n">被调用过的爬虫</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoked_spider</span> <span class="o">-</span> <span class="n">被调用过的爬虫</span>
 
 <span class="n">invoked_spider</span> <span class="o">-</span> <span class="n">未被调用过的爬虫</span>
 
@@ -54,21 +45,21 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li>支持的请求方式: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 </ul>
 <p>请求示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">schedulelist</span><span class="o">.</span><span class="n">json</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">schedulelist</span><span class="o">.</span><span class="n">json</span>
 </pre></div>
 </div>
 <p>响应示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;invoked_spider&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tips&quot;</span><span class="p">,</span> <span class="s2">&quot;smtb&quot;</span><span class="p">],</span> <span class="s2">&quot;un_invoked_spider&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;lagou&quot;</span><span class="p">],</span> <span class="s2">&quot;most_record&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tips&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;invoked_spider&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tips&quot;</span><span class="p">,</span> <span class="s2">&quot;smtb&quot;</span><span class="p">],</span> <span class="s2">&quot;un_invoked_spider&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;lagou&quot;</span><span class="p">],</span> <span class="s2">&quot;most_record&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tips&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="runtimestats-json">
 <h2>runtimestats.json<a class="headerlink" href="#runtimestats-json" title="Permalink to this headline">¶</a></h2>
 <p>爬虫运行时间统计,如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">average</span> <span class="o">-</span> <span class="n">所有爬虫的平均运行时长</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">average</span> <span class="o">-</span> <span class="n">所有爬虫的平均运行时长</span>
 
 <span class="n">shortest</span> <span class="o">-</span> <span class="n">爬虫运行的最短时间</span>
 
@@ -76,47 +67,41 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li>支持的请求方式: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 </ul>
 <p>请求示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">runtimestats</span><span class="o">.</span><span class="n">json</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">runtimestats</span><span class="o">.</span><span class="n">json</span>
 </pre></div>
 </div>
 <p>响应示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;average&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:04&quot;</span><span class="p">,</span> <span class="s2">&quot;shortest&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:01&quot;</span><span class="p">,</span> <span class="s2">&quot;longest&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:12&quot;</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;average&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:04&quot;</span><span class="p">,</span> <span class="s2">&quot;shortest&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:01&quot;</span><span class="p">,</span> <span class="s2">&quot;longest&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:12&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Scrapyd uses the <a class="reference external" href="http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html">distutils LooseVersion</a> to interpret the version numbers you provide.</p>
-</div>
-<p>The latest version for a project will be used by default whenever necessary.</p>
-<p><a href="#id2"><span class="problematic" id="id3">schedule.json_</span></a> and <a href="#id4"><span class="problematic" id="id5">listspiders.json_</span></a> allow you to explicitly set the desired project version.</p>
 </div>
 <div class="section" id="psnstats-json">
-<span id="scrapyd-schedule"></span><h2>psnstats.json<a class="headerlink" href="#psnstats-json" title="Permalink to this headline">¶</a></h2>
+<h2>psnstats.json<a class="headerlink" href="#psnstats-json" title="Permalink to this headline">¶</a></h2>
 <p>项目及爬虫数量统计,如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">project_nums</span> <span class="o">-</span> <span class="n">项目总数</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project_nums</span> <span class="o">-</span> <span class="n">项目总数</span>
 
 <span class="n">spider_nums</span> <span class="o">-</span> <span class="n">爬虫总数</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li>支持的请求方式: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 </ul>
 <p>请求示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">psnstats</span><span class="o">.</span><span class="n">json</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">psnstats</span><span class="o">.</span><span class="n">json</span>
 </pre></div>
 </div>
 <p>响应示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;project_nums&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;spider_nums&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;project_nums&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;spider_nums&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="prospider-json">
 <h2>prospider.json<a class="headerlink" href="#prospider-json" title="Permalink to this headline">¶</a></h2>
 <p>项目与对应爬虫名以及数量统计,如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pro_spider</span> <span class="o">-</span> <span class="n">结果集</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pro_spider</span> <span class="o">-</span> <span class="n">结果集</span>
 
     <span class="n">project</span> <span class="o">-</span> <span class="n">项目名称</span>
 
@@ -124,21 +109,21 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li>支持的请求方式: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 </ul>
 <p>请求示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">prospider</span><span class="o">.</span><span class="n">json</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">prospider</span><span class="o">.</span><span class="n">json</span>
 </pre></div>
 </div>
 <p>响应示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;pro_spider&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;lagou,tips&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;smtaobao&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;smtb&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}]}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;pro_spider&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;lagou,tips&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;smtaobao&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;smtb&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}]}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="timerank-json">
 <h2>timerank.json<a class="headerlink" href="#timerank-json" title="Permalink to this headline">¶</a></h2>
 <p>爬虫运行时长榜,如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">-</span> <span class="n">结果集</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">-</span> <span class="n">结果集</span>
 
     <span class="n">time</span> <span class="o">-</span> <span class="n">运行时长</span>
 
@@ -146,18 +131,18 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li>支持的请求方式: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>参数:<ul>
-<li><code class="docutils literal"><span class="pre">index</span></code> (int, 可选参数) - 排行榜默认取前10条记录，你可以通过index来指定想要的记录数量</li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code> (int, 可选参数) - 排行榜默认取前10条记录，你可以通过index来指定想要的记录数量</li>
 </ul>
 </li>
 </ul>
 <p>请求示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>curl http://localhost:6800/timerank.json?index=5
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>curl http://localhost:6800/timerank.json?index=5
 </pre></div>
 </div>
 <p>响应示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
 <span class="s2">&quot;ranks&quot;</span><span class="p">:[</span>
     <span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:52&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;dps&quot;</span><span class="p">},</span>
     <span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:33&quot;</span><span class="p">,</span> <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;invorank&quot;</span><span class="p">},</span>
@@ -171,22 +156,22 @@
 <div class="section" id="invokerank-json">
 <h2>invokerank.json<a class="headerlink" href="#invokerank-json" title="Permalink to this headline">¶</a></h2>
 <p>爬虫调用排行榜,如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">-</span> <span class="n">结果集</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">-</span> <span class="n">结果集</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li>支持的请求方式: <code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>参数:<ul>
-<li><code class="docutils literal"><span class="pre">index</span></code> (int, 可选参数) - 排行榜默认取前10条记录，你可以通过index来指定想要的记录数量</li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code> (int, 可选参数) - 排行榜默认取前10条记录，你可以通过index来指定想要的记录数量</li>
 </ul>
 </li>
 </ul>
 <p>请求示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>curl http://localhost:6800/invokerank.json?index=5
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>curl http://localhost:6800/invokerank.json?index=5
 </pre></div>
 </div>
 <p>响应示例:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
 <span class="s2">&quot;ranks&quot;</span><span class="p">:[</span>
     <span class="p">[</span><span class="s2">&quot;tips&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
     <span class="p">[</span><span class="s2">&quot;lagou&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
@@ -194,30 +179,276 @@
 <span class="p">]}</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">[奎因W提示] 下面的API请求方式都是POST方式，参数较多，需要仔细看清文档。编写文档时我都是边测边写，所以文档的参数及用法是通过测试的。</p>
+</div>
 </div>
 <div class="section" id="filter-json">
 <h2>filter.json<a class="headerlink" href="#filter-json" title="Permalink to this headline">¶</a></h2>
-<p>D根据参数按时间范围/项目名称/爬虫名称/运行时长对爬虫运行记录进行筛选过滤。</p>
-<ul>
-<li><p class="first">支持的请求方式: <code class="docutils literal"><span class="pre">POST</span></code></p>
+<p>根据参数按时间范围/项目名称/爬虫名称/运行时长对爬虫运行记录进行筛选过滤。</p>
+<ul class="simple">
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>参数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code> (int, 可选) - 记录条数， 默认10条。</li>
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code> (string, 不可选) - 过滤类型，可选类型参数为：time/project/spider/runtime,以下为每个类型的对应参数<ul>
+<li><code class="docutils literal notranslate"><span class="pre">time</span></code> (string, 参数： st, et) - 时间范围，如2018-09-26 00:00:00, 2018-09-30 18:30:00</li>
+<li><code class="docutils literal notranslate"><span class="pre">project</span></code> (string, 参数： project) - 项目名称，如:Alibaba</li>
+<li><code class="docutils literal notranslate"><span class="pre">spider</span></code> (string, 参数： spider) - 爬虫名称，如:tmall</li>
+<li><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (int, 参数： runtime) - 运行时长(秒)，如:5<ul>
+<li><code class="docutils literal notranslate"><span class="pre">compare</span></code> (sting, 参数： greater/less/equal/greater equal/less equal) - 比较运算，如:greater（大于）、less(小于)、equal(等于)、greater equal(大于等于)、less equal(小于等于)</li>
+</ul>
 </li>
-<li><p class="first">参数:</p>
-<ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">type</span></code> (string, 不可选) - 过滤类型，可选类型参数为：time/project/spider/runtime,以下为每个类型的对应参数:</p>
-<p>time (string, 参数： st, et) - 时间范围，如2018-09-26 00:00:00</p>
-<p>project (string, 参数： project) - 项目名称，如:Alibaba</p>
-<p>spider (string, 参数： spider) - 爬虫名称，如:tmall</p>
-<p>runtime (int, 参数： runtime) - 运行时长(秒)，如:5</p>
+</ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>Example request:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/filter.json -d project=myproject
+<p>时间范围筛选(time)请求示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/filter.json -d type=time -d st=2018-09-26 00:00:00 -d et=2018-09-30 18:30:00 -d index=5
 </pre></div>
 </div>
-<p>Example response:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">}</span>
+<p><em>st: start_time 爬虫启动时间. et: end_time 爬虫结束时间.</em></p>
+<p>时间范围筛选(time)响应示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:08&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:08.266556&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ea5107d6c45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:13&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:21&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.874961&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:26&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:08.072063&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ec4d03d2c45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:23&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:30&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.029813&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;lagou&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/lagou/f17c0dc6c45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:28&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:36&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.774142&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;lagou&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/lagou/f33211d8c45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>指定项目筛选(project)请求示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/filter.json -d type=project -d project=Lagous -d index=3
+</pre></div>
+</div>
+<p><em>project: project name 爬虫项目名称.</em></p>
+<p>指定项目筛选(project)响应示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:08&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:08.266556&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ea5107d6c45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:13&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:21&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.874961&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:26&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:08.072063&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ec4d03d2c45011e8970954ee75c0e204.log&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>指定爬虫名称筛选(spider)请求示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/filter.json -d type=spider -d spider=tips
+</pre></div>
+</div>
+<p><em>spider: spider name 爬虫项目名称.</em></p>
+<p>指定爬虫名称筛选(spider)响应示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:13&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:21&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.874961&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:18&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:26&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:08.072063&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ec4d03d2c45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>指定爬虫运行时长筛选(runtime)请求示例(greater):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/filter.json -d type=runtime -d runtime=8 -d compare=greater
+</pre></div>
+</div>
+<p><em>spider: spider name 爬虫项目名称. runtime : runtime 运行时间. compare: compare 数学运算类型</em></p>
+<p>指定爬虫运行时长筛选(runtime)响应示例(greater):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:38&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:55&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:16.977073&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;waper&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/waper/fbcb5ad4c45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>指定爬虫运行时长筛选(runtime)请求示例(less):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/filter.json -d type=runtime -d runtime=8 -d compare=less
+</pre></div>
+</div>
+<p><em>spider: spider name 爬虫项目名称. runtime : runtime 运行时间. compare: compare 数学运算类型</em></p>
+<p>指定爬虫运行时长筛选(runtime)响应示例(less):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:23&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:30&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.029813&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;lagou&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/lagou/f17c0dc6c45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:28&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:36&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.774142&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;lagou&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/lagou/f33211d8c45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="order-json">
+<h2>order.json<a class="headerlink" href="#order-json" title="Permalink to this headline">¶</a></h2>
+<p>根据参数按时间范围/项目名称/爬虫名称/运行时长对爬虫运行记录进行筛选过滤。</p>
+<ul class="simple">
+<li>支持的请求方式: <code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>参数:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code> (int, 可选) - 记录条数， 默认10条。</li>
+<li><code class="docutils literal notranslate"><span class="pre">reverse</span></code> (int, 可选(0 or 1)) - 记录条数， 默认为0，即升序。</li>
+<li><code class="docutils literal notranslate"><span class="pre">order</span></code> (string, 不可选) - 排序key，可用参数为：start_time/end_time/spider/project/runtime</li>
+</ul>
+</li>
+</ul>
+<p>排序请求示例(start_time, 默认升序):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/order.json -d type=order -d order=start_time
+</pre></div>
+</div>
+<p><em>start_time: start_time 爬虫启动时间.</em></p>
+<p>排序响应示例(start_time, 默认升序):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:08&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:16&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:08.266556&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ea5107d6c45011e8970954ee75c0e204.log&quot;</span>
+ <span class="p">},</span>
+ <span class="p">{</span>
+     <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:13&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:21&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:07.874961&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;tips&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log&quot;</span>
+ <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>排序请求示例(start_time, 指定降序):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/order.json -d type=order -d order=start_time -d reverse=1
+</pre></div>
+</div>
+<p><em>start_time: start_time 爬虫启动时间.</em></p>
+<p>排序响应示例(start_time, 指定降序):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;node_name&quot;</span><span class="p">:</span> <span class="s2">&quot;node-name&quot;</span><span class="p">,</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:43&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:35:00&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:17.017967&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;waper&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/waper/fc37e708c45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:38&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30 09:34:55&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;runtime&quot;</span><span class="p">:</span> <span class="s2">&quot;0:00:16.977073&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;Lagous&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;spider&quot;</span><span class="p">:</span> <span class="s2">&quot;waper&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;logs&quot;</span><span class="p">:</span> <span class="s2">&quot;logs/Lagous/waper/fbcb5ad4c45011e8970954ee75c0e204.log&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -239,6 +470,7 @@
 <li><a class="reference internal" href="#timerank-json">timerank.json</a></li>
 <li><a class="reference internal" href="#invokerank-json">invokerank.json</a></li>
 <li><a class="reference internal" href="#filter-json">filter.json</a></li>
+<li><a class="reference internal" href="#order-json">order.json</a></li>
 </ul>
 </li>
 </ul>
@@ -247,7 +479,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="deploy.html" title="previous chapter">Deploying your project</a></li>
-      <li>Next: <a href="config.html" title="next chapter">Configuration file</a></li>
+      <li>Next: <a href="config.html" title="next chapter">配置文件</a></li>
   </ul></li>
 </ul>
 </div>
@@ -260,12 +492,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -276,7 +510,7 @@
       &copy;2018, Scrapy group and quinns.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

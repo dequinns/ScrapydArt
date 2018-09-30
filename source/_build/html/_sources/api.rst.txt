@@ -52,16 +52,6 @@ runtimestats.json
     {"node_name": "node-name", "status": "ok", "average": "0:00:04", "shortest": "0:00:01", "longest": "0:00:12"}
 
 
-.. note:: Scrapyd uses the `distutils LooseVersion`_ to interpret the version numbers you provide.
-
-The latest version for a project will be used by default whenever necessary.
-
-schedule.json_ and listspiders.json_ allow you to explicitly set the desired project version.
-
-.. _distutils LooseVersion: http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html
-
-.. _scrapyd-schedule:
-
 
 psnstats.json
 -------------
@@ -164,31 +154,293 @@ invokerank.json
     ]}
 
 
+.. note:: [奎因W提示] 下面的API请求方式都是POST方式，参数较多，需要仔细看清文档。编写文档时我都是边测边写，所以文档的参数及用法是通过测试的。
+
+
 filter.json
 ---------------
 
-D根据参数按时间范围/项目名称/爬虫名称/运行时长对爬虫运行记录进行筛选过滤。
+根据参数按时间范围/项目名称/爬虫名称/运行时长对爬虫运行记录进行筛选过滤。
 
 * 支持的请求方式: ``POST``
 * 参数:
 
-  * ``type`` (string, 不可选) - 过滤类型，可选类型参数为：time/project/spider/runtime,以下为每个类型的对应参数::
+  * ``index`` (int, 可选) - 记录条数， 默认10条。
 
-    time (string, 参数： st, et) - 时间范围，如2018-09-26 00:00:00
+  * ``type`` (string, 不可选) - 过滤类型，可选类型参数为：time/project/spider/runtime,以下为每个类型的对应参数
 
-    project (string, 参数： project) - 项目名称，如:Alibaba
+    * ``time`` (string, 参数： st, et) - 时间范围，如2018-09-26 00:00:00, 2018-09-30 18:30:00
 
-    spider (string, 参数： spider) - 爬虫名称，如:tmall
+    * ``project`` (string, 参数： project) - 项目名称，如:Alibaba
 
-    runtime (int, 参数： runtime) - 运行时长(秒)，如:5
+    * ``spider`` (string, 参数： spider) - 爬虫名称，如:tmall
 
-Example request::
+    * ``runtime`` (int, 参数： runtime) - 运行时长(秒)，如:5
 
-    $ curl http://localhost:6800/filter.json -d project=myproject
+      * ``compare`` (sting, 参数： greater/less/equal/greater equal/less equal) - 比较运算，如:greater（大于）、less(小于)、equal(等于)、greater equal(大于等于)、less equal(小于等于)
 
-Example response::
 
-    {"status": "ok"}
+时间范围筛选(time)请求示例::
 
-.. _DOWNLOAD_DELAY: http://doc.scrapy.org/en/latest/topics/settings.html#download-delay
-.. _issue 12: https://github.com/scrapy/scrapyd/issues/12
+    $ curl http://localhost:6800/filter.json -d type=time -d st=2018-09-26 00:00:00 -d et=2018-09-30 18:30:00 -d index=5
+
+*st: start_time 爬虫启动时间. et: end_time 爬虫结束时间.*
+
+时间范围筛选(time)响应示例::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+              "start_time": "2018-09-30 09:34:08",
+              "end_time": "2018-09-30 09:34:16",
+              "runtime": "0:00:08.266556",
+              "project": "Lagous",
+              "spider": "tips",
+              "logs": "logs/Lagous/tips/ea5107d6c45011e8970954ee75c0e204.log"
+          },
+          {
+              "start_time": "2018-09-30 09:34:13",
+              "end_time": "2018-09-30 09:34:21",
+              "runtime": "0:00:07.874961",
+              "project": "Lagous",
+              "spider": "tips",
+              "logs": "logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log"
+          },
+          {
+              "start_time": "2018-09-30 09:34:18",
+              "end_time": "2018-09-30 09:34:26",
+              "runtime": "0:00:08.072063",
+              "project": "Lagous",
+              "spider": "tips",
+              "logs": "logs/Lagous/tips/ec4d03d2c45011e8970954ee75c0e204.log"
+          },
+          {
+              "start_time": "2018-09-30 09:34:23",
+              "end_time": "2018-09-30 09:34:30",
+              "runtime": "0:00:07.029813",
+              "project": "Lagous",
+              "spider": "lagou",
+              "logs": "logs/Lagous/lagou/f17c0dc6c45011e8970954ee75c0e204.log"
+          },
+          {
+              "start_time": "2018-09-30 09:34:28",
+              "end_time": "2018-09-30 09:34:36",
+              "runtime": "0:00:07.774142",
+              "project": "Lagous",
+              "spider": "lagou",
+              "logs": "logs/Lagous/lagou/f33211d8c45011e8970954ee75c0e204.log"
+          }
+      ]
+      }
+
+
+指定项目筛选(project)请求示例::
+
+    $ curl http://localhost:6800/filter.json -d type=project -d project=Lagous -d index=3
+
+*project: project name 爬虫项目名称.*
+
+指定项目筛选(project)响应示例::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+              "start_time": "2018-09-30 09:34:08",
+              "end_time": "2018-09-30 09:34:16",
+              "runtime": "0:00:08.266556",
+              "project": "Lagous",
+              "spider": "tips",
+              "logs": "logs/Lagous/tips/ea5107d6c45011e8970954ee75c0e204.log"
+          },
+          {
+              "start_time": "2018-09-30 09:34:13",
+              "end_time": "2018-09-30 09:34:21",
+              "runtime": "0:00:07.874961",
+              "project": "Lagous",
+              "spider": "tips",
+              "logs": "logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log"
+          },
+          {
+              "start_time": "2018-09-30 09:34:18",
+              "end_time": "2018-09-30 09:34:26",
+              "runtime": "0:00:08.072063",
+              "project": "Lagous",
+              "spider": "tips",
+              "logs": "logs/Lagous/tips/ec4d03d2c45011e8970954ee75c0e204.log"
+          }
+      ]
+      }
+
+
+
+指定爬虫名称筛选(spider)请求示例::
+
+    $ curl http://localhost:6800/filter.json -d type=spider -d spider=tips
+
+*spider: spider name 爬虫项目名称.*
+
+指定爬虫名称筛选(spider)响应示例::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+            "start_time": "2018-09-30 09:34:13",
+            "end_time": "2018-09-30 09:34:21",
+            "runtime": "0:00:07.874961",
+            "project": "Lagous",
+            "spider": "tips",
+            "logs": "logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log"
+        },
+        {
+            "start_time": "2018-09-30 09:34:18",
+            "end_time": "2018-09-30 09:34:26",
+            "runtime": "0:00:08.072063",
+            "project": "Lagous",
+            "spider": "tips",
+            "logs": "logs/Lagous/tips/ec4d03d2c45011e8970954ee75c0e204.log"
+        }
+      ]
+      }
+
+
+
+指定爬虫运行时长筛选(runtime)请求示例(greater)::
+
+    $ curl http://localhost:6800/filter.json -d type=runtime -d runtime=8 -d compare=greater
+
+*spider: spider name 爬虫项目名称. runtime : runtime 运行时间. compare: compare 数学运算类型*
+
+指定爬虫运行时长筛选(runtime)响应示例(greater)::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+            "start_time": "2018-09-30 09:34:38",
+            "end_time": "2018-09-30 09:34:55",
+            "runtime": "0:00:16.977073",
+            "project": "Lagous",
+            "spider": "waper",
+            "logs": "logs/Lagous/waper/fbcb5ad4c45011e8970954ee75c0e204.log"
+        }
+      ]
+      }
+
+
+指定爬虫运行时长筛选(runtime)请求示例(less)::
+
+    $ curl http://localhost:6800/filter.json -d type=runtime -d runtime=8 -d compare=less
+
+*spider: spider name 爬虫项目名称. runtime : runtime 运行时间. compare: compare 数学运算类型*
+
+指定爬虫运行时长筛选(runtime)响应示例(less)::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+            "start_time": "2018-09-30 09:34:23",
+            "end_time": "2018-09-30 09:34:30",
+            "runtime": "0:00:07.029813",
+            "project": "Lagous",
+            "spider": "lagou",
+            "logs": "logs/Lagous/lagou/f17c0dc6c45011e8970954ee75c0e204.log"
+        },
+        {
+            "start_time": "2018-09-30 09:34:28",
+            "end_time": "2018-09-30 09:34:36",
+            "runtime": "0:00:07.774142",
+            "project": "Lagous",
+            "spider": "lagou",
+            "logs": "logs/Lagous/lagou/f33211d8c45011e8970954ee75c0e204.log"
+        }
+      ]
+      }
+
+
+
+order.json
+---------------
+
+根据参数按时间范围/项目名称/爬虫名称/运行时长对爬虫运行记录进行筛选过滤。
+
+* 支持的请求方式: ``POST``
+* 参数:
+
+  * ``index`` (int, 可选) - 记录条数， 默认10条。
+
+  * ``reverse`` (int, 可选(0 or 1)) - 记录条数， 默认为0，即升序。
+
+  * ``order`` (string, 不可选) - 排序key，可用参数为：start_time/end_time/spider/project/runtime
+
+
+排序请求示例(start_time, 默认升序)::
+
+    $ curl http://localhost:6800/order.json -d type=order -d order=start_time
+
+*start_time: start_time 爬虫启动时间.*
+
+排序响应示例(start_time, 默认升序)::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+           "start_time": "2018-09-30 09:34:08",
+           "end_time": "2018-09-30 09:34:16",
+           "runtime": "0:00:08.266556",
+           "project": "Lagous",
+           "spider": "tips",
+           "logs": "logs/Lagous/tips/ea5107d6c45011e8970954ee75c0e204.log"
+       },
+       {
+           "start_time": "2018-09-30 09:34:13",
+           "end_time": "2018-09-30 09:34:21",
+           "runtime": "0:00:07.874961",
+           "project": "Lagous",
+           "spider": "tips",
+           "logs": "logs/Lagous/tips/ebccab4cc45011e8970954ee75c0e204.log"
+       }
+      ]
+      }
+
+
+排序请求示例(start_time, 指定降序)::
+
+    $ curl http://localhost:6800/order.json -d type=order -d order=start_time -d reverse=1
+
+*start_time: start_time 爬虫启动时间.*
+
+排序响应示例(start_time, 指定降序)::
+
+      {
+      "node_name": "node-name",
+      "status": "ok",
+      "spider": [
+          {
+            "start_time": "2018-09-30 09:34:43",
+            "end_time": "2018-09-30 09:35:00",
+            "runtime": "0:00:17.017967",
+            "project": "Lagous",
+            "spider": "waper",
+            "logs": "logs/Lagous/waper/fc37e708c45011e8970954ee75c0e204.log"
+        },
+        {
+            "start_time": "2018-09-30 09:34:38",
+            "end_time": "2018-09-30 09:34:55",
+            "runtime": "0:00:16.977073",
+            "project": "Lagous",
+            "spider": "waper",
+            "logs": "logs/Lagous/waper/fbcb5ad4c45011e8970954ee75c0e204.log"
+        }
+      ]
+      }

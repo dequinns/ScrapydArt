@@ -1,0 +1,169 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>访问权限控制 &#8212; ScrapydArt 1.2.0.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="依赖" href="install.html" />
+    <link rel="prev" title="使用交流" href="contact.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="auth">
+<span id="id1"></span><h1>访问权限控制<a class="headerlink" href="#auth" title="Permalink to this headline">¶</a></h1>
+<p>Scrapyd未提供访问权限控制功能，意味着只要你将爬虫项目部署到公网上，别人就可以任意访问和操控你的爬虫，这听起来很刺激。
+当然，你也可以借助别的工具实现访问权限控制，比如Nginx，但是当你在调用API的时候，就会更刺激！</p>
+<p>考虑到大部分职业爬虫工程师的爬虫都会部署到服务器，所以ScrapydArt 通过以下几种方式实现了平台的访问权限控制:</p>
+<ul class="simple">
+<li>自定义视图类</li>
+<li>编写权限验证装饰器</li>
+<li>配置文件</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1>启用访问权限<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>考虑到迁移的成本和一致性，ScrapydArt默认未开启访问权限。</p>
+<p>如果你想要开启，只需要到配置文件中的[scrapyd]级别下新增两个参数[auth_username和auth_password]，就像这样:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[scrapyd]
+eggs_dir    = eggs
+logs_dir    = logs
+http_port   = 6800
+……
+……
+auth_username = quinns
+auth_password = quinns7
+</pre></div>
+</div>
+<p>记得，要在[scapyd]级别下，而不是更下方的[services]级别,要是配置错误，那就尴尬了。</p>
+</div>
+<div class="section" id="id3">
+<h1>如何使用<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>如果你完成了上面的配置，你需要重新启动ScrapydArt服务才能够生效。同时也意味着你的访问权限已经开启。</p>
+<p>为了简短一些，在使用时以:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">un</span>  <span class="n">代替</span> <span class="n">auth_username</span>
+<span class="n">pwd</span> <span class="n">代替</span> <span class="n">auth_password</span>
+</pre></div>
+</div>
+<p>从此，无论你使用GET还是POST，都必须带上对应的用户名(un)和密码(pwd)，否则你将会被它拒之千里之外.</p>
+<p>如果你没有提供对应的用户名与密码，你将得到未授权的提示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span> <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;You have not obtained the authorization.&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>原来Scrapyd的请求示例(HTTP-GET):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span>
+</pre></div>
+</div>
+<p>现在ScrapydArt的请求示例(HTTP-GET):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>curl http://localhost:6800?un=quinns&amp;pwd=quinns7
+</pre></div>
+</div>
+<p>原来Scrapyd的请求示例(HTTP-GET):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">invokerank</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>现在ScrapydArt的请求示例(HTTP-GET):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>curl http://localhost:6800/invokerank.json?un=quinns&amp;pwd=quinns7
+</pre></div>
+</div>
+<p>原来Scrapyd的请求示例(API-GET):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>现在ScrapydArt的请求示例(API-GET):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">d</span> <span class="n">un</span><span class="o">=</span><span class="n">quinns</span> <span class="o">-</span><span class="n">d</span> <span class="n">pwd</span><span class="o">=</span><span class="n">quinns7</span>
+</pre></div>
+</div>
+<p>原来Scrapyd的请求示例(API-POST):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">order</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">d</span> <span class="nb">type</span><span class="o">=</span><span class="n">order</span> <span class="o">-</span><span class="n">d</span> <span class="n">order</span><span class="o">=</span><span class="n">start_time</span>
+</pre></div>
+</div>
+<p>现在ScrapydArt的请求示例(API-POST):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6800</span><span class="o">/</span><span class="n">order</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">d</span> <span class="nb">type</span><span class="o">=</span><span class="n">order</span> <span class="o">-</span><span class="n">d</span> <span class="n">order</span><span class="o">=</span><span class="n">start_time</span> <span class="o">-</span><span class="n">d</span> <span class="n">un</span><span class="o">=</span><span class="n">quinns</span> <span class="o">-</span><span class="n">d</span> <span class="n">pwd</span><span class="o">=</span><span class="n">quinns7</span>
+</pre></div>
+</div>
+<p><em>un: auth_username 用户名. pwd: auth_password 密码.</em></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">访问权限控制</a></li>
+<li><a class="reference internal" href="#id2">启用访问权限</a></li>
+<li><a class="reference internal" href="#id3">如何使用</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="contact.html" title="previous chapter">使用交流</a></li>
+      <li>Next: <a href="install.html" title="next chapter">依赖</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/auth.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Scrapy group and quinns.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/auth.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -4,26 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Overview &#8212; ScrapydArt 1.2.0.5 documentation</title>
+    <title>概述 &#8212; ScrapydArt 1.2.0.5 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.2.0.5',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="install.html" />
+    <link rel="next" title="使用交流" href="contact.html" />
     <link rel="prev" title="ScrapydArt" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -40,22 +31,22 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>项目与版本说明<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="id1">
+<h1>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>项目与版本说明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>ScrapydArt在版本上与Scrapyd保持一致，比如Scrapyd当前版本1.2.0，则ScrapydArt
 的版本为1.2.0.n</p>
 <p>为了避免增加大家的学习成本，我的编码设计与原scrapyd保持一致，所以在使用上不会给大家
 带来困扰，这也是我要写中文文档的原因之一，毕竟都是中国人。如果有国外用户使用，反馈到
 我的邮箱，那就再考虑英文文档。</p>
 </div>
-<div class="section" id="id2">
-<h2>做了哪些改动<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>做了哪些改动<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>因为我每天都使用scrapyd来查看爬虫运行状态，所以我觉得它应该具有更多的爬虫运行信息数
 据以及数据统计，以便我们这些爬虫工程师更好的观察和调整。</p>
 <p>改动主要涉及几个方面:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">权限控制</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">权限控制</span>
 <span class="n">视图</span>
 <span class="n">界面</span>
 <span class="n">API</span>
@@ -64,32 +55,32 @@
 <ol class="arabic simple">
 <li>对，没有错！以前你的爬虫项目通过scrapyd部署到公网服务器，任何人都可以访问它并通过它操控你的爬虫。现在你可以给ScrapydArt设置用户名和密码，将未通过授权的访问者拒之千里之外。</li>
 <li>因为权限管理需要兼容html与json，为此我编写了一个新的视图类。</li>
-<li>界面的美观与否因人而异，正所谓 <code class="docutils literal"><span class="pre">我自横刀向天笑，是去是留在我手</span></code></li>
+<li>界面的美观与否因人而异，正所谓 <code class="docutils literal notranslate"><span class="pre">我自横刀向天笑，是去是留在我手</span></code></li>
 <li>对于爬虫运行信息，除了html方面外，我也编写了具有同样功能的API；但是强大的过滤筛选以及排序功能仅在API开放，后续更多强大的功能也都会着重API方面，它更灵活也更贴近工作需求。</li>
 </ol>
 </div>
 <div class="section" id="starting-scrapydart">
 <h2>Starting ScrapydArt<a class="headerlink" href="#starting-scrapydart" title="Permalink to this headline">¶</a></h2>
-<p>如果你想要启动scrapydart服务, 可以使用命令 <code class="docutils literal"><span class="pre">scrapydart</span></code> 来启动，而不是之前使用的 <code class="docutils literal"><span class="pre">scrapyd</span></code></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">scrapydart</span>
+<p>如果你想要启动scrapydart服务, 可以使用命令 <code class="docutils literal notranslate"><span class="pre">scrapydart</span></code> 来启动，而不是之前使用的 <code class="docutils literal notranslate"><span class="pre">scrapyd</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapydart</span>
 </pre></div>
 </div>
 <p>然后你就会看到你的scrapydart服务成功启动。</p>
 </div>
-<div class="section" id="id3">
-<h2>爬虫的调度<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>爬虫的调度<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>爬虫运行调度跟scrapyd是一模一样的，这方面保持一致:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=spider2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://localhost:6800/schedule.json -d project=myproject -d spider=spider2
 {&quot;status&quot;: &quot;ok&quot;, &quot;jobid&quot;: &quot;26d1b1a6d6f111e0be5c001e648c57f8&quot;}
 </pre></div>
 </div>
-<p>更多好用的API请参阅: <a class="reference internal" href="api.html#api"><span class="std std-ref">API</span></a>  文档  <code class="docutils literal"><span class="pre">只有文档才能让你变得更强</span></code></p>
+<p>更多好用的API请参阅: <a class="reference internal" href="api.html#api"><span class="std std-ref">API</span></a>  文档  <code class="docutils literal notranslate"><span class="pre">只有文档才能让你变得更强</span></code></p>
 </div>
 <div class="section" id="web">
 <span id="webui"></span><h2>Web 操作界面<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h2>
 <p>ScrapydArt的界面功能要比Scrapyd要丰富一些，除了原有的观察运行情况信息之外，还新增了统计、汇总
 以及排序信息，让你能够更好的了解项目和爬虫运行状态，比如:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>到底哪些爬虫被调用过，哪些又从未被调用过？
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>到底哪些爬虫被调用过，哪些又从未被调用过？
 
 被调用次数最多的爬虫是哪一个？
 
@@ -112,11 +103,11 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Overview</a><ul>
-<li><a class="reference internal" href="#id1">项目与版本说明</a></li>
-<li><a class="reference internal" href="#id2">做了哪些改动</a></li>
+<li><a class="reference internal" href="#">概述</a><ul>
+<li><a class="reference internal" href="#id2">项目与版本说明</a></li>
+<li><a class="reference internal" href="#id3">做了哪些改动</a></li>
 <li><a class="reference internal" href="#starting-scrapydart">Starting ScrapydArt</a></li>
-<li><a class="reference internal" href="#id3">爬虫的调度</a></li>
+<li><a class="reference internal" href="#id4">爬虫的调度</a></li>
 <li><a class="reference internal" href="#web">Web 操作界面</a></li>
 </ul>
 </li>
@@ -126,7 +117,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">ScrapydArt</a></li>
-      <li>Next: <a href="install.html" title="next chapter">Installation</a></li>
+      <li>Next: <a href="contact.html" title="next chapter">使用交流</a></li>
   </ul></li>
 </ul>
 </div>
@@ -139,12 +130,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -155,7 +148,7 @@
       &copy;2018, Scrapy group and quinns.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

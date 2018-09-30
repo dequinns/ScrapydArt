@@ -4,20 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Contributing &#8212; ScrapydArt 1.2.0.5 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.2.0.5',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -53,16 +44,16 @@
 </div>
 <div class="section" id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
-<p>Tests are implemented using the <a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html">Twisted unit-testing framework</a>. Scrapyd uses <code class="docutils literal"><span class="pre">trial</span></code> as the test running application.</p>
+<p>Tests are implemented using the <a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html">Twisted unit-testing framework</a>. Scrapyd uses <code class="docutils literal notranslate"><span class="pre">trial</span></code> as the test running application.</p>
 </div>
 <div class="section" id="running-tests">
 <h2>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h2>
 <p>To run all tests go to the root directory of the Scrapyd source code and run:</p>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">trial</span> <span class="pre">scrapyd</span></code></div></blockquote>
-<p>To run a specific test (say <code class="docutils literal"><span class="pre">tests/test_poller.py</span></code>) use:</p>
+<div><code class="docutils literal notranslate"><span class="pre">trial</span> <span class="pre">scrapyd</span></code></div></blockquote>
+<p>To run a specific test (say <code class="docutils literal notranslate"><span class="pre">tests/test_poller.py</span></code>) use:</p>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">trial</span> <span class="pre">scrapyd.tests.test_poller</span></code></div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">trial</span> <span class="pre">scrapyd.tests.test_poller</span></code></div></blockquote>
 </div>
 <div class="section" id="writing-tests">
 <h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h2>
@@ -72,11 +63,11 @@ patches if you want them to get accepted sooner.</p>
 <p>Scrapyd uses unit-tests, which are located in the <a class="reference external" href="https://github.com/scrapy/scrapyd/tree/master/scrapyd/tests">scrapyd/tests</a> directory.
 Their module name typically resembles the full path of the module they’re
 testing. For example, the scheduler code is in:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">scrapyd</span><span class="o">.</span><span class="n">scheduler</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapyd</span><span class="o">.</span><span class="n">scheduler</span>
 </pre></div>
 </div>
 <p>And their unit-tests are in:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">scrapyd</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_scheduler</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapyd</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_scheduler</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </div>
@@ -84,7 +75,7 @@ testing. For example, the scheduler code is in:</p>
 <h2>Installing Locally<a class="headerlink" href="#installing-locally" title="Permalink to this headline">¶</a></h2>
 <p>To install a locally edited version of Scrapyd onto the system to use and test, inside the project root run:</p>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></div></blockquote>
 </div>
 </div>
 
@@ -123,12 +114,14 @@ testing. For example, the scheduler code is in:</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -139,7 +132,7 @@ testing. For example, the scheduler code is in:</p>
       &copy;2018, Scrapy group and quinns.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

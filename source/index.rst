@@ -14,6 +14,8 @@ Contents
    :maxdepth: 2
 
    overview
+   contact
+   auth
    install
    deploy
    api
