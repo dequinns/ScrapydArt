@@ -8,15 +8,16 @@ ScrapydArt
 .. image:: https://codecov.io/gh/scrapy/scrapyd/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/scrapy/scrapyd
 
-项目说明
 
 ==========
 项目演示地址
 ==========
 
     http://scrapydart.porters.vip
-    
-#拒绝裸奔
+
+==========
+拒绝裸奔
+==========
 
     ScrapydArt在Scrapyd基础上新增了权限验证、筛选过滤、排序、数据统计以及排行榜等功能，并且有了更强大的API。
 
@@ -24,19 +25,26 @@ scrapyd是世界最优秀的爬虫框架scrapy官方提供的部署控管理平�
 
     但它并不提供权限验证功能，意味着只要你部署到服务器，任何人都可以访问它并且控制你的爬虫。它也不提供数据统计的功能，你不可能知道你部署的爬虫有多少、也不知道它们运行了多少次、谁的运行时间最长、更别说排行了。官方开发人员关注的重点是api功能性而非界面，所以界面（甚至可以说没有界面）不谈美观。
 
-#ScrapydArt安装
+==========
+ScrapydArt安装
+==========
 
         pip install scrapydart
-
-#ScrapydArt启动
+        
+==========
+ScrapydArt启动
+==========
 
     scrapydart
-    
-#ScrapydArt-web界面
+
+==========
+ScrapydArt-web界面
+==========
 
     http://localhost:6800
-  
+========== 
 更多使用方法和ScrapydArt的详细介绍请阅读ScrapydArt文档
+==========
 
     https://scrapydart.readthedocs.io/zh/latest/
 
