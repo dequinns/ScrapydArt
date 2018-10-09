@@ -24,9 +24,8 @@ ScrapydArt文档
   
 ScrapydArt安装
 
-```
-pip install scrapydart
-```
+        pip install scrapydart
+
   
   
  
