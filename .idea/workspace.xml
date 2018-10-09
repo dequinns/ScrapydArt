@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="" />
+    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/scrapydart/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/scrapydart/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbs/Fabias.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbs/Tips.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/scrapydart-1.2.0.6-py3.6.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/scrapydart-1.2.0.6.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eggs/Fabias/1539075269.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eggs/Tips/1539075221.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/57ac6e9acba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/58403e90cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/5914cf2acba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/5987dc86cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/59f83d78cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/flu_event/5e4c4040cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/flu_teams/60d58a10cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/players/704d1e2ccba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/players/70eaa8f4cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/quinns/74282334cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/quinns/74f570facba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Fabias/quinns/7572fba6cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Tips/compos/48bb3d58cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Tips/scroces/4d810b1acba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Tips/scroces/4e5a6b62cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Tips/shoot/517aac4ecba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Tips/shoot/51f084dccba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Tips/shoot/525dbf52cba111e8b6f054ee75c0e204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twistd.pid" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +56,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="VERSION" value="1" />
+          <entry key="VERSION" value="2" />
           <entry key="conf" value="1" />
           <entry key="css" value="1" />
           <entry key="html" value="1" />
-          <entry key="py" value="16" />
+          <entry key="py" value="17" />
           <entry key="rst" value="1" />
         </counts>
       </usages-collector>
@@ -37,24 +68,24 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="16" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="17" />
           <entry key="ReST" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="VERSION" value="10" />
+          <entry key="VERSION" value="11" />
           <entry key="conf" value="9" />
           <entry key="css" value="68" />
-          <entry key="py" value="62" />
+          <entry key="py" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="68" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="62" />
+          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="Python" value="64" />
         </counts>
       </usages-collector>
     </session>
@@ -74,13 +105,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapydart/website.py">
+        <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="33">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/conf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -142,7 +179,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -176,9 +213,10 @@
         <option value="$PROJECT_DIR$/scrapyd/template/css/style.css" />
         <option value="$PROJECT_DIR$/scrapyd/webtools.py" />
         <option value="$PROJECT_DIR$/scrapyd/template/feature.html" />
-        <option value="$PROJECT_DIR$/scrapydart/VERSION" />
         <option value="$PROJECT_DIR$/scrapydart/default_scrapyd.conf" />
         <option value="$PROJECT_DIR$/scrapydart/app.py" />
+        <option value="$PROJECT_DIR$/scrapydart/VERSION" />
+        <option value="$PROJECT_DIR$/source/conf.py" />
       </list>
     </option>
   </component>
@@ -209,13 +247,7 @@
             <path>
               <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapydart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapydart" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -485,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/configparser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -582,6 +607,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
         </state>
       </provider>
     </entry>
