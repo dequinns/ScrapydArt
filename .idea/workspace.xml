@@ -1,83 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MANIFEST.in" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/scrapydart-1.2.0.5.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/VERSION" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/_deprecate.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/_deprecate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/default_scrapyd.conf" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/default_scrapyd.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/eggstorage.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/eggstorage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/eggutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/eggutils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/environ.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/environ.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/interfaces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/launcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/poller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/poller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/scheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/scripts/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/scripts/scrapyd_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/spiderqueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/spiderqueue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/sqlite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/documents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/feature.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/footers.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/footers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/img/._cd-icon-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/img/._cd-icon-arrow.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/img/cd-icon-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/img/cd-icon-arrow.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/jobs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/jquery-2.1.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/jquery-2.1.4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/modern.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/modern.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/velocity.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/velocity.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/txapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/txapp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/webservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/webservice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/website.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/websource.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/websource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/webtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/webtools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/not-zip-safe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/doctrees/config.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/doctrees/config.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/doctrees/overview.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/doctrees/overview.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/.buildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/_sources/config.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/_sources/config.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/_sources/overview.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/_sources/overview.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/_static/documentation_options.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/_static/documentation_options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/config.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/contributing.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/contributing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/deploy.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/deploy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/genindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/install.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/objects.inv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/searchindex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/config.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/config.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/overview.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/overview.rst" afterDir="false" />
-    </list>
+    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -657,7 +581,7 @@
     <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
