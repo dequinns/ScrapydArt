@@ -253,10 +253,6 @@ class Jobs(CustomResource):
             """.format(home_uri=home_uri, jobs_uri=jobs_uri, feature_uri=feature_uri, documents_uri=documents_uri)
         header = HEADER_HTML.format(style_css=STYLE_CSS, reset_css=RESET_CSS, nav=nav)
         most_spider, most_num = most_record
-        tps = table_header
-        aps = self.prep_table()
-        invoked_spider = ",".join(invoked_spider)
-        un_invoked_spider = ",".join(un_invoked_spider)
         feature_uri = feature_uri
 
         jobs = JOBS_HTML.format(table_header=table_header, tables=self.prep_table(), most_spider=most_spider,

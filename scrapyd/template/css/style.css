@@ -464,7 +464,8 @@ Navigation
 
 .show-data {
     width: 96%;
-    height: 520px;
+    /*height: 520px;*/
+    height: auto;
     background-color: white;
     margin-left: 2%;
     margin-right: 2%;
@@ -472,10 +473,11 @@ Navigation
 
 .show-data-small {
     width: 96%;
-    height: 150px;
+    height: auto;
     background-color: white;
     margin-left: 2%;
     margin-right: 2%;
+
 }
 
 .show-data-service {
@@ -494,6 +496,7 @@ Navigation
     margin-right: 2%;
     margin-top: 10px;
     padding-top: 10px;
+    word-wrap: break-word;  /*允许过长的内容自动换行*/
 }
 
 .show-data-bottom {
@@ -738,9 +741,11 @@ table.dataintable {
   border-collapse:collapse;
   border:1px solid #aaa;
   width:100%;
-  line-height: 35px;
+  line-height: 26px;
   color: rgba(0,0,0,.65);
   font-size: 14px;
+    word-wrap: break-word;  /*允许过长的内容自动换行*/
+    /*table-layout: fixed;*/ /*在恰当的断字点进行换行*/
 }
 table.dataintable th {
   vertical-align:baseline;
@@ -766,6 +771,7 @@ table.dataintable tr:nth-child(even) {
     height: auto;
     width: 96%;
     margin-left: 2%;
+    background-color: white;
 }
 
 .click_style {

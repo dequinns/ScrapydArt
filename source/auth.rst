@@ -21,7 +21,11 @@ Scrapyd未提供访问权限控制功能，意味着只要你将爬虫项目部�
 
 考虑到迁移的成本和一致性，ScrapydArt默认未开启访问权限。
 
-如果你想要开启，只需要到配置文件中的[scrapyd]级别下新增两个参数[auth_username和auth_password]，就像这样::
+如果你想要开启，只需要到配置文件中
+
+(配置文件通常位于你python环境的包目录下，如/anaconda3/lib/python3.6/scrapydart/default_scrapyd.conf)
+
+的[scrapyd]级别下新增两个参数[auth_username和auth_password]，就像这样::
 
     [scrapyd]
     eggs_dir    = eggs

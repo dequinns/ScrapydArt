@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="" />
+    <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/template/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/template/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/website.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/webtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/webtools.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ScrapdArt$scrapyd_run.coverage" NAME="scrapyd_run Coverage Results" MODIFIED="1538214502856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapyd/scripts" />
+    <SUITE FILE_PATH="coverage/ScrapdArt$scrapyd_run.coverage" NAME="scrapyd_run Coverage Results" MODIFIED="1539066826012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapyd/scripts" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1669486045">
@@ -17,30 +23,38 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="VERSION" value="1" />
-          <entry key="py" value="5" />
+          <entry key="conf" value="1" />
+          <entry key="css" value="1" />
+          <entry key="html" value="1" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="5" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="VERSION" value="9" />
+          <entry key="css" value="68" />
           <entry key="py" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CSS" value="68" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="Python" value="38" />
         </counts>
@@ -67,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapyd/VERSION">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            <state relative-caret-position="33">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -79,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapyd/webtools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="-3455">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -91,9 +105,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapyd/website.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-1929">
+              <caret line="229" column="70" lean-forward="true" selection-start-line="229" selection-start-column="70" selection-end-line="229" selection-end-column="70" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrapyd/template/feature.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapyd/template/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-166">
+              <caret line="495" column="21" lean-forward="true" selection-start-line="495" selection-start-column="21" selection-end-line="495" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapyd/default_scrapyd.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapyd/auth.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +168,8 @@
     <findStrings>
       <find>Read</find>
       <find>utf8</find>
+      <find>.show-data</find>
+      <find>show-data-m</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,8 +179,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/scrapyd/webtools.py" />
         <option value="$PROJECT_DIR$/scrapyd/VERSION" />
+        <option value="$PROJECT_DIR$/scrapyd/website.py" />
+        <option value="$PROJECT_DIR$/scrapyd/template/css/style.css" />
+        <option value="$PROJECT_DIR$/scrapyd/webtools.py" />
+        <option value="$PROJECT_DIR$/scrapyd/template/feature.html" />
       </list>
     </option>
   </component>
@@ -136,11 +193,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="29" />
-    <option name="y" value="52" />
-    <option name="width" value="1717" />
-    <option name="height" value="922" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="295" />
+    <option name="y" value="69" />
+    <option name="width" value="1524" />
+    <option name="height" value="994" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -154,6 +211,24 @@
               <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapyd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapyd" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapyd" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -163,7 +238,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scrapyd" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/Leisus" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -223,15 +298,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="52" width="1717" height="922" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2525434" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17075774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.56361324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24161074" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.18344519" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -269,25 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/webtools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/website.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapyd/webservice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -299,8 +356,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapyd/VERSION">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        <state relative-caret-position="33">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd/default_scrapyd.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd/template/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="495" column="21" lean-forward="true" selection-start-line="495" selection-start-column="21" selection-end-line="495" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd/webtools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3455">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1929">
+          <caret line="229" column="70" lean-forward="true" selection-start-line="229" selection-start-column="70" selection-end-line="229" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd/template/feature.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
         </state>
       </provider>
     </entry>

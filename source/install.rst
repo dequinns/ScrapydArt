@@ -5,7 +5,7 @@
 依赖
 ------------
 
-ScrapydArt 依赖于以下库(与Scrapyd保持一直)，并且版本不能低于指定版本:
+ScrapydArt 依赖于以下库(与Scrapyd保持一致，因此你不需要为此困扰)，并且版本不能低于指定版本:
 
 * Python 2.7 or above
 * Twisted 8.0 or above

@@ -103,7 +103,6 @@ def get_ps(self):
     return projects, spiders
 
 
-
 def get_invokes(finishes, spiders):
     """获取已被调用与未被调用的爬虫名称
     :param: finishes 已运行完毕的爬虫列表

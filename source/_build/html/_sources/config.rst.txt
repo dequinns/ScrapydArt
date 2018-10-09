@@ -7,6 +7,8 @@
 
 新增的API配置已然加入其中
 
+对于访问权限控制的配置，你可以在文档的[权限控制]中找到配置方法与使用方法
+
 Scrapyd searches for configuration files in the following locations, and parses
 them in order with the latest one taking more priority:
 
