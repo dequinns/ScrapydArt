@@ -1,0 +1,99 @@
+
+	<main class="cd-main">
+		<section class="cd-section index visible">
+			<div class="top-hello">
+				<div class="top-hello-text">
+					<h1>What is ScrapydArt? <a href={feature_uri}>click here.</a></h1>
+					<p><span>How to schedule a spider?</span> Example using curl:http://localhost:6800/schedule.json -d project=default -d spider=some spider</p>
+
+				</div>
+			</div>
+			<div class="show-data">
+				<div class="show-data-middle">
+				<div class="sdm-top">
+					<p><span>被调用过的爬虫 : </span><span>{invoked_spider}</span></p>
+					<p><span>被调用次数最多 : </span><span>{most_spider},{most_num}次</span></p>
+					<p><span>未被调用的爬虫 : </span><span>{un_invoked_spider}</span></p>
+
+				</div>
+			</div>
+
+				<div class="blocks-all">
+
+
+				</div>
+				<hr class="hr">
+				<div class="show-data-left">
+					<div class="panels-header">
+						<h1>爬虫运行信息一览</h1>
+					</div>
+					<div class="panels-content">
+						<div class="panels-content-panels">
+							<div class="pcp-top">{nop}</div>
+							<div class="pcp-bottom">number of spider pending</div>
+						</div>
+						<div class="panels-content-panels">
+							<div class="pcp-top">{nor}</div>
+							<div class="pcp-bottom">number of spider running</div>
+						</div>
+						<div class="panels-content-panels">
+							<div class="pcp-top">{nof}</div>
+							<div class="pcp-bottom">number of spider finished</div>
+						</div>
+
+						<div class="panels-content-panels">
+							<div class="pcp-top">{average}</div>
+							<div class="pcp-bottom">Average time of spider running</div>
+						</div>
+
+						<div class="panels-content-panels">
+							<div class="pcp-top">{shortest}</div>
+							<div class="pcp-bottom">Shortest time of spider running</div>
+						</div>
+
+						<div class="panels-content-panels">
+							<div class="pcp-top">{longest}</div>
+							<div class="pcp-bottom">Longest time of spider running</div>
+						</div>
+					</div>
+				</div>
+				<div class="show-data-right">
+					<div class="sph-header">
+						<h1>项目信息一览</h1>
+					</div>
+					<div class="sps-content">
+					<div class="spcp">
+						<div class="spcp-panels">
+							<div class="spcp-top">{lpn}</div>
+							<div class="spcp-bottom">当前项目总数</div>
+						</div>
+						<div class="spcp-panels">
+							<div class="spcp-top">{lsn}</div>
+							<div class="spcp-bottom">当前爬虫总数</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="show-data-dataintable">
+				<table class="dataintable">
+					<tr>
+						<th>项目名称</th>
+						<th>爬虫名称</th>
+						<th>爬虫数量</th>
+					</tr>
+					{table}
+				</table>
+			</div>
+			<div class="show-data-dataintable">
+				<table class="dataintable">
+					<tr>
+						<th>运行时长rank榜</th>
+						<th>爬虫名称</th>
+						<th>运行时长</th>
+					</tr>
+					{ranks}
+				</table>
+			</div>
+

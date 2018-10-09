@@ -1,0 +1,40 @@
+	<main class="cd-main">
+		<section class="cd-section projects visible">
+			<header>
+				<div class="cd-title">
+					<h2>ScrapydArt新增功能一览</h2>
+					<p>scrapydArt在scrapyd基础上新增加了权限验证、爬虫调用情况统计、页面样式美化、运行信息统计以及新增加几个api等。对于爬虫管理，奎因的理念是"将80%的情况掌握在自己手中"</p>
+				</div>
+
+			</header>
+
+			<div class="cd-content" id="projects-content">
+				<p>一、我们经常在工作中使用scrapyd来部署我们的爬虫，尽管它为我们提供了几个API，但还是无法满足日常工作的需求，所以奎因在scrapyd的原有基础上新增加了一些贴近实际工作需求的功能以及api。</p>
+
+				<p>二、奎因将新的平台称为<span class="cus-color">ScrapydArt</span>，名称来源：<span class="cus-color">scrapyd auth resource template</span></p>
+
+				<p>三、在爬虫项目管理以及html方面，ScrapydArt新增了以下功能：</p>
+				<p class="text-indent">1.权限验证：默认不启用。如果你想启用，你需要在配置文件的[scrapyd]下设置用户名及密码，并且重新启动服务，请求时如果没有携带正确的un和pwd，你将会被拒之门外。</p>
+				<p class="text-indent">2.爬虫调用情况：实际工作中，你可能需要知道哪些爬虫被调用过而哪些又从未被调用过，你甚至想知道哪个爬虫被调用最多次，这些数据ScrapydArt已经为你准备好了</p>
+				<p class="text-indent">3.页面样式美化：奎因每天早上都要使用这个管理平台，通过它来查看爬虫的运行状态和信息，所以奎因认为稍微改动一下视觉效果，可以让你的心情从早上舒畅到半夜</p>
+				<p class="text-indent">4.爬虫运行信息统计数据: 我们需要对自己管理的爬虫有一个整体的概观，所以ScrapydArt也为你提供了一些实用的统计信息
+					比如当前时间不同状态的爬虫数量、爬虫运行时间统计、项目及爬虫数量统计、项目及下辖爬虫的对应名称与数量列表</p>
+				<p class="text-indent">5.爬虫运行排行榜: 榜单从来都是数据观察不必可少的手段，ScrapydArt为你提供了运行时长榜、调用次数榜、爬虫数量榜等多个榜单排行。</p>
+
+				<p>四、当然，除了html方面的表现外，ScrapydArt还新增了一些api。以下api只做功能说明，具体参数、用法示例及详情请阅读<a href="https://scrapydart.readthedocs.io/zh/latest/" target="_blank">ScrapydArt官方文档</a></p>
+				<p class="text-indent">1.schedulelist.json: 爬虫调用情况 请求方式-GET</p>
+				<p class="text-indent">2.runnums.json: 当前时间不同状态的爬虫数量 请求方式-GET</p>
+				<p class="text-indent">3.runtimestats.json: 爬虫运行时间统计 请求方式-GET</p>
+				<p class="text-indent">4.psnstats.json: 项目及爬虫数量统计 请求方式-GET</p>
+				<p class="text-indent">5.prospider.json: 项目与对应爬虫名以及数量统计 请求方式-GET</p>
+				<p class="text-indent">6.timerank.json: 爬虫运行时长榜 请求方式-GET</p>
+				<p class="text-indent">7.invokerank.json: 爬虫被调用次数榜 请求方式-GET</p>
+				<p class="text-indent">7.filter.json: 根据参数按时间范围/项目名称/爬虫名称/运行时长筛选爬虫运行记录 请求方式-POST</p>
+				<p class="text-indent">8.oreder.json: 按时间范围、按爬虫名称、按项目名称、按运行时长对爬虫运行记录进行排序 请求方式-POST</p>
+
+				<p>五、奎因会逐渐完善平台的功能，当前待开发清单：</p>
+				<p class="text-indent">1.静态资源（如logs、item）访问权限控制</p>
+
+			</div> <!-- .cd-content -->
+		</section> <!-- .cd-section -->
+	</main> <!-- .cd-main -->

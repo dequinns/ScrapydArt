@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>配置文件 &#8212; ScrapydArt 1.2.0.5 documentation</title>
+    <title>配置文件 &#8212; ScrapydArt 1.2.0.6 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="_static/documentation_options.js"></script>
@@ -33,18 +33,11 @@
             
   <div class="section" id="config">
 <span id="id1"></span><h1>配置文件<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h1>
-<p>配置文件的路径以及名称与Scrapyd保持一致</p>
+<p>配置文件的路径与Scrapyd保持一致，在python环境的包安装目录（site-packages）下,比如</p>
+<p>/anaconda3/lib/python3.6/site-packages/</p>
+<p>目录名称为scrapydart</p>
 <p>新增的API配置已然加入其中</p>
 <p>对于访问权限控制的配置，你可以在文档的[权限控制]中找到配置方法与使用方法</p>
-<p>Scrapyd searches for configuration files in the following locations, and parses
-them in order with the latest one taking more priority:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">/etc/scrapyd/scrapyd.conf</span></code> (Unix)</li>
-<li><code class="docutils literal notranslate"><span class="pre">c:\scrapyd\scrapyd.conf</span></code> (Windows)</li>
-<li><code class="docutils literal notranslate"><span class="pre">/etc/scrapyd/conf.d/*</span></code> (in alphabetical order, Unix)</li>
-<li><code class="docutils literal notranslate"><span class="pre">scrapyd.conf</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">~/.scrapyd.conf</span></code> (users home directory)</li>
-</ul>
 <p>The configuration file supports the following options (see default values in
 the <a class="reference internal" href="#config-example"><span class="std std-ref">example</span></a>).</p>
 <div class="section" id="http-port">
@@ -155,7 +148,7 @@ This setting must provide the root class of the twisted web resource.</p>
 <div class="section" id="example-configuration-file">
 <span id="config-example"></span><h2>Example configuration file<a class="headerlink" href="#example-configuration-file" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example configuration file with all the defaults:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">scrapyd</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">scrapydart</span><span class="p">]</span>
 <span class="n">eggs_dir</span>    <span class="o">=</span> <span class="n">eggs</span>
 <span class="n">logs_dir</span>    <span class="o">=</span> <span class="n">logs</span>
 <span class="n">items_dir</span>   <span class="o">=</span>
@@ -168,32 +161,32 @@ This setting must provide the root class of the twisted web resource.</p>
 <span class="n">bind_address</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
 <span class="n">http_port</span>   <span class="o">=</span> <span class="mi">6800</span>
 <span class="n">debug</span>       <span class="o">=</span> <span class="n">off</span>
-<span class="n">runner</span>      <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">runner</span>
-<span class="n">application</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">application</span>
-<span class="n">launcher</span>    <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">Launcher</span>
-<span class="n">webroot</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">website</span><span class="o">.</span><span class="n">Root</span>
+<span class="n">runner</span>      <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">runner</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">application</span>
+<span class="n">launcher</span>    <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">Launcher</span>
+<span class="n">webroot</span>     <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">website</span><span class="o">.</span><span class="n">Root</span>
 
 
 
 <span class="p">[</span><span class="n">services</span><span class="p">]</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Schedule</span>
-<span class="n">cancel</span><span class="o">.</span><span class="n">json</span>       <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Cancel</span>
-<span class="n">addversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">AddVersion</span>
-<span class="n">listprojects</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListProjects</span>
-<span class="n">listversions</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListVersions</span>
-<span class="n">listspiders</span><span class="o">.</span><span class="n">json</span>  <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListSpiders</span>
-<span class="n">delproject</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteProject</span>
-<span class="n">delversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteVersion</span>
-<span class="n">listjobs</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListJobs</span>
-<span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DaemonStatus</span>
-<span class="n">schedulelist</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ScheduleList</span>
-<span class="n">runtimestats</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">RunTimeStats</span>
-<span class="n">psnstats</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">PsnStats</span>
-<span class="n">prospider</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ProSpider</span>
-<span class="n">timerank</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">TimeRank</span>
-<span class="n">invokerank</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">InvokeRank</span>
-<span class="nb">filter</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Filter</span>
-<span class="n">order</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapyd</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Order</span>
+<span class="n">schedule</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Schedule</span>
+<span class="n">cancel</span><span class="o">.</span><span class="n">json</span>       <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Cancel</span>
+<span class="n">addversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">AddVersion</span>
+<span class="n">listprojects</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListProjects</span>
+<span class="n">listversions</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListVersions</span>
+<span class="n">listspiders</span><span class="o">.</span><span class="n">json</span>  <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListSpiders</span>
+<span class="n">delproject</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteProject</span>
+<span class="n">delversion</span><span class="o">.</span><span class="n">json</span>   <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DeleteVersion</span>
+<span class="n">listjobs</span><span class="o">.</span><span class="n">json</span>     <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ListJobs</span>
+<span class="n">daemonstatus</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">DaemonStatus</span>
+<span class="n">schedulelist</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ScheduleList</span>
+<span class="n">runtimestats</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">RunTimeStats</span>
+<span class="n">psnstats</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">PsnStats</span>
+<span class="n">prospider</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">ProSpider</span>
+<span class="n">timerank</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">TimeRank</span>
+<span class="n">invokerank</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">InvokeRank</span>
+<span class="nb">filter</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Filter</span>
+<span class="n">order</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">scrapydart</span><span class="o">.</span><span class="n">webservice</span><span class="o">.</span><span class="n">Order</span>
 </pre></div>
 </div>
 </div>
@@ -261,7 +254,7 @@ This setting must provide the root class of the twisted web resource.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2018, Scrapy group and quinns.
+      &copy;2018, quinns.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>

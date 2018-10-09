@@ -3,10 +3,80 @@
   <component name="ChangeListManager">
     <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/template/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/template/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/template/feature.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/website.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapyd/webtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapyd/webtools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MANIFEST.in" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/scrapydart-1.2.0.5.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/_deprecate.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/_deprecate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/default_scrapyd.conf" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/default_scrapyd.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/eggstorage.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/eggstorage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/eggutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/eggutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/environ.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/environ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/interfaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/launcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/poller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/poller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/scheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/scripts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/scripts/scrapyd_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/spiderqueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/spiderqueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/css/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/documents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/footers.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/footers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/img/._cd-icon-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/img/._cd-icon-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/img/cd-icon-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/img/cd-icon-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/jobs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/jquery-2.1.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/jquery-2.1.4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/modern.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/modern.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/template/js/velocity.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/template/js/velocity.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/txapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/txapp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/webservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/webservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/website.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/websource.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/websource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapyd/webtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/webtools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/not-zip-safe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/requires.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/doctrees/config.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/doctrees/config.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/doctrees/environment.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/doctrees/overview.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/doctrees/overview.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/.buildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/_sources/config.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/_sources/config.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/_sources/overview.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/_sources/overview.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/_static/documentation_options.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/_static/documentation_options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/contributing.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/contributing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/deploy.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/deploy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/genindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/objects.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_build/html/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/config.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/config.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/overview.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/overview.rst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +85,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ScrapdArt$scrapyd_run__1_.coverage" NAME="scrapyd_run (1) Coverage Results" MODIFIED="1539069705835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapydart/scripts" />
     <SUITE FILE_PATH="coverage/ScrapdArt$scrapyd_run.coverage" NAME="scrapyd_run Coverage Results" MODIFIED="1539066826012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapyd/scripts" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -34,7 +105,8 @@
           <entry key="conf" value="1" />
           <entry key="css" value="1" />
           <entry key="html" value="1" />
-          <entry key="py" value="6" />
+          <entry key="py" value="16" />
+          <entry key="rst" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -42,21 +114,23 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="6" />
+          <entry key="Python" value="16" />
+          <entry key="ReST" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="VERSION" value="9" />
+          <entry key="VERSION" value="10" />
+          <entry key="conf" value="9" />
           <entry key="css" value="68" />
-          <entry key="py" value="38" />
+          <entry key="py" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="68" />
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="38" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Python" value="62" />
         </counts>
       </usages-collector>
     </session>
@@ -64,49 +138,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/scripts/scrapyd_run.py">
+        <entry file="file://$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/VERSION">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/webtools.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3455">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="330">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#23#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/website.py">
+        <entry file="file://$PROJECT_DIR$/scrapydart/website.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1929">
-              <caret line="229" column="70" lean-forward="true" selection-start-line="229" selection-start-column="70" selection-end-line="229" selection-end-column="70" />
+            <state relative-caret-position="263">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -114,50 +161,68 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapydart/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapydart/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/application/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="452" selection-start-line="452" selection-end-line="452" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/scripts/twistd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapydart/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scrapyd/template/feature.html">
+        <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/template/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-166">
-              <caret line="495" column="21" lean-forward="true" selection-start-line="495" selection-start-column="21" selection-end-line="495" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/default_scrapyd.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-198" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/auth.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyd/webservice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -170,6 +235,9 @@
       <find>utf8</find>
       <find>.show-data</find>
       <find>show-data-m</find>
+      <find>ConfigParser</find>
+      <find>scrapydart</find>
+      <find>configparser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,6 +252,9 @@
         <option value="$PROJECT_DIR$/scrapyd/template/css/style.css" />
         <option value="$PROJECT_DIR$/scrapyd/webtools.py" />
         <option value="$PROJECT_DIR$/scrapyd/template/feature.html" />
+        <option value="$PROJECT_DIR$/scrapydart/VERSION" />
+        <option value="$PROJECT_DIR$/scrapydart/default_scrapyd.conf" />
+        <option value="$PROJECT_DIR$/scrapydart/app.py" />
       </list>
     </option>
   </component>
@@ -214,20 +285,13 @@
             <path>
               <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapyd" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapydart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapyd" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ScrapdArt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ScrapdArt" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapyd" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapydart" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,7 +319,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.scrapyd_run (1)">
+    <configuration name="scrapyd_run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ScrapdArt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapydart/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scrapyd_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ScrapdArt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,8 +364,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.scrapyd_run" />
+      <item itemvalue="Python.scrapyd_run (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scrapyd_run (1)" />
         <item itemvalue="Python.scrapyd_run" />
       </list>
     </recent_temporary>
@@ -305,9 +396,9 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24161074" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.18344519" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29082775" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43064877" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -330,22 +421,94 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/__init__.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/build/lib/scrapydart/config.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/build/lib/scrapydart/config.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/build/lib/scrapydart/config.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/build/lib/scrapydart/config.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/app.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/app.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/website.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/app.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/app.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scrapydart/app.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scrapyd/scripts/scrapyd_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/webservice.py">
+    <entry file="file://$PROJECT_DIR$/scrapydart/webservice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -354,59 +517,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/VERSION">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/default_scrapyd.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/auth.py">
+    <entry file="file://$PROJECT_DIR$/scrapydart/auth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/template/css/style.css">
+    <entry file="file://$PROJECT_DIR$/scrapydart/template/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-166">
-          <caret line="495" column="21" lean-forward="true" selection-start-line="495" selection-start-column="21" selection-end-line="495" selection-end-column="21" />
+          <caret line="495" column="21" selection-start-line="495" selection-start-column="21" selection-end-line="495" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/webtools.py">
+    <entry file="file://$PROJECT_DIR$/scrapydart/webtools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3455">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/website.py">
+    <entry file="file://$PROJECT_DIR$/scrapydart/template/feature.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1929">
-          <caret line="229" column="70" lean-forward="true" selection-start-line="229" selection-start-column="70" selection-end-line="229" selection-end-column="70" />
+        <state relative-caret-position="315">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-709">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/configparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="780" selection-start-line="780" selection-end-line="780" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/txapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/lib/scrapydart/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd/template/feature.html">
+    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/scripts/twistd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        <state relative-caret-position="160">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/application/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="452" selection-start-line="452" selection-end-line="452" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#23#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

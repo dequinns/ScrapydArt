@@ -3,20 +3,17 @@
 配置文件
 ==================
 
-配置文件的路径以及名称与Scrapyd保持一致
+配置文件的路径与Scrapyd保持一致，在python环境的包安装目录（site-packages）下,比如
+
+/anaconda3/lib/python3.6/site-packages/
+
+目录名称为scrapydart
 
 新增的API配置已然加入其中
 
 对于访问权限控制的配置，你可以在文档的[权限控制]中找到配置方法与使用方法
 
-Scrapyd searches for configuration files in the following locations, and parses
-them in order with the latest one taking more priority:
 
-* ``/etc/scrapyd/scrapyd.conf`` (Unix)
-* ``c:\scrapyd\scrapyd.conf`` (Windows)
-* ``/etc/scrapyd/conf.d/*`` (in alphabetical order, Unix)
-* ``scrapyd.conf``
-* ``~/.scrapyd.conf`` (users home directory)
 
 The configuration file supports the following options (see default values in
 the :ref:`example <config-example>`).
@@ -158,5 +155,5 @@ Example configuration file
 
 Here is an example configuration file with all the defaults:
 
-.. literalinclude:: ../scrapyd/default_scrapyd.conf
+.. literalinclude:: ../scrapydart/default_scrapyd.conf
 .. _Twisted Application Framework: http://twistedmatrix.com/documents/current/core/howto/application.html

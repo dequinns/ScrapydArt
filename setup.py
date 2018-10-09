@@ -9,20 +9,20 @@ except ImportError:
 
 from os.path import join, dirname
 
-with open(join(dirname(__file__), 'scrapyd/VERSION')) as f:
+with open(join(dirname(__file__), 'scrapydart/VERSION')) as f:
     version = f.read().strip()
 
 setup_args = {
     'name': 'scrapydart',
     'version': version,
-    'url': 'https://github.com/scrapy/scrapyd',
+    'url': 'https://github.com/scrapy/scrapydart',
     'description': 'A service for running Scrapy spiders, with an HTTP API',
     'long_description': open('README.rst', encoding="utf-8").read(),
     'author': 'Scrapy developers',
     'maintainer': 'Scrapy developers',
     'maintainer_email': 'info@scrapy.org',
     'license': 'BSD',
-    'packages': ['scrapyd'],
+    'packages': ['scrapydart'],
     'include_package_data': True,
     'zip_safe': False,
     'classifiers': [
@@ -50,9 +50,9 @@ if using_setuptools:
         'enum-compat',
     ]
     setup_args['entry_points'] = {'console_scripts': [
-        'scrapydart = scrapyd.scripts.scrapyd_run:main'
+        'scrapydart = scrapydart.scripts.scrapyd_run:main'
     ]}
 else:
-    setup_args['scripts'] = ['scrapyd/scripts/scrapyd_run.py']
+    setup_args['scripts'] = ['scrapydart/scripts/scrapyd_run.py']
 
 setup(**setup_args)
