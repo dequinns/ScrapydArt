@@ -3,35 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eed94a31-edd9-4cff-93f3-697a21df2dc9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/scrapydart/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/scrapydart/VERSION" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbs/Fabias.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbs/Tips.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/scrapydart-1.2.0.6-py3.6.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/scrapydart-1.2.0.6.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eggs/Fabias/1539075269.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eggs/Tips/1539075221.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/57ac6e9acba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/58403e90cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/5914cf2acba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/5987dc86cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/fabia/59f83d78cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/flu_event/5e4c4040cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/flu_teams/60d58a10cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/players/704d1e2ccba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/players/70eaa8f4cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/quinns/74282334cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/quinns/74f570facba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Fabias/quinns/7572fba6cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Tips/compos/48bb3d58cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Tips/scroces/4d810b1acba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Tips/scroces/4e5a6b62cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Tips/shoot/517aac4ecba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Tips/shoot/51f084dccba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Tips/shoot/525dbf52cba111e8b6f054ee75c0e204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydart/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydart/VERSION" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twistd.pid" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +18,11 @@
     <session id="1669486045">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.29" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.29" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="231">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#23#61#0" expanded="true" />
@@ -108,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="33">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -117,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/source/conf.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -125,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapydart/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="1089">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
@@ -134,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapydart/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="462">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
@@ -143,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/application/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="14157">
               <caret line="452" selection-start-line="452" selection-end-line="452" />
             </state>
           </provider>
@@ -152,7 +123,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/scripts/twistd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="660">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
@@ -161,7 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
+            <state relative-caret-position="957">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
@@ -170,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapydart/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="825">
               <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
@@ -182,7 +153,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="594">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
@@ -237,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,7 +225,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,12 +319,12 @@
     <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17075774" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17235859" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29082775" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29082775" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43064877" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,21 +436,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scrapydart/webservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapydart/auth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -494,9 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3455">
           <caret line="103" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -548,30 +507,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/scripts/twistd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/application/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="452" selection-start-line="452" selection-end-line="452" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydart/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapydart/scripts/scrapyd_run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="231">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#23#61#0" expanded="true" />
@@ -579,23 +517,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapydart/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scrapydart/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="462">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/application/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14157">
+          <caret line="452" selection-start-line="452" selection-end-line="452" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/twisted/scripts/twistd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/envscrapy/lib/python3.6/site-packages/scrapy/utils/misc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="957">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapydart/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="825">
           <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
@@ -605,22 +571,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapydart/default_scrapyd.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="594">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydart/VERSION">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
         </state>
       </provider>
     </entry>
